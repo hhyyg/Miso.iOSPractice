@@ -25,10 +25,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func setDefaultLabelText(_ sender: UIButton) {
-        nameTextField.text = "Default Text"
-    }
-
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         nameTextField.resignFirstResponder()
 

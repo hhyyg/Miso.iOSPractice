@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB1494721FD5234B0000EDA9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1494711FD5234B0000EDA9 /* RatingControl.swift */; };
 		EBC2887A1FD4ED33005D1CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC288791FD4ED33005D1CCC /* AppDelegate.swift */; };
 		EBC2887C1FD4ED33005D1CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2887B1FD4ED33005D1CCC /* ViewController.swift */; };
 		EBC2887F1FD4ED33005D1CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC2887D1FD4ED33005D1CCC /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB1494711FD5234B0000EDA9 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		EBC288761FD4ED33005D1CCC /* Miso.TrackingMealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Miso.TrackingMealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC288791FD4ED33005D1CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBC2887B1FD4ED33005D1CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				EBC288791FD4ED33005D1CCC /* AppDelegate.swift */,
 				EBC2887B1FD4ED33005D1CCC /* ViewController.swift */,
+				EB1494711FD5234B0000EDA9 /* RatingControl.swift */,
 				EBC2887D1FD4ED33005D1CCC /* Main.storyboard */,
 				EBC288801FD4ED33005D1CCC /* Assets.xcassets */,
 				EBC288821FD4ED33005D1CCC /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC2887C1FD4ED33005D1CCC /* ViewController.swift in Sources */,
+				EB1494721FD5234B0000EDA9 /* RatingControl.swift in Sources */,
 				EBC2887A1FD4ED33005D1CCC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
