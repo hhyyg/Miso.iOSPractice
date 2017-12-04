@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBC2887A1FD4ED33005D1CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC288791FD4ED33005D1CCC /* AppDelegate.swift */; };
+		EBC2887C1FD4ED33005D1CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2887B1FD4ED33005D1CCC /* ViewController.swift */; };
+		EBC2887F1FD4ED33005D1CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC2887D1FD4ED33005D1CCC /* Main.storyboard */; };
+		EBC288811FD4ED33005D1CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC288801FD4ED33005D1CCC /* Assets.xcassets */; };
+		EBC288841FD4ED33005D1CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC288821FD4ED33005D1CCC /* LaunchScreen.storyboard */; };
+		EBC2888F1FD4ED33005D1CCC /* Miso_TrackingMealAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2888E1FD4ED33005D1CCC /* Miso_TrackingMealAppTests.swift */; };
+		EBC2889A1FD4ED33005D1CCC /* Miso_TrackingMealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC288991FD4ED33005D1CCC /* Miso_TrackingMealAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBC2888B1FD4ED33005D1CCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBC2886E1FD4ED33005D1CCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBC288751FD4ED33005D1CCC;
+			remoteInfo = Miso.TrackingMealApp;
+		};
+		EBC288961FD4ED33005D1CCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBC2886E1FD4ED33005D1CCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBC288751FD4ED33005D1CCC;
+			remoteInfo = Miso.TrackingMealApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBC288761FD4ED33005D1CCC /* Miso.TrackingMealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Miso.TrackingMealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC288791FD4ED33005D1CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBC2887B1FD4ED33005D1CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBC2887E1FD4ED33005D1CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBC288801FD4ED33005D1CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBC288831FD4ED33005D1CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBC288851FD4ED33005D1CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC2888A1FD4ED33005D1CCC /* Miso.TrackingMealAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Miso.TrackingMealAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC2888E1FD4ED33005D1CCC /* Miso_TrackingMealAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Miso_TrackingMealAppTests.swift; sourceTree = "<group>"; };
+		EBC288901FD4ED33005D1CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC288951FD4ED33005D1CCC /* Miso.TrackingMealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Miso.TrackingMealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC288991FD4ED33005D1CCC /* Miso_TrackingMealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Miso_TrackingMealAppUITests.swift; sourceTree = "<group>"; };
+		EBC2889B1FD4ED33005D1CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBC288731FD4ED33005D1CCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC288871FD4ED33005D1CCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC288921FD4ED33005D1CCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBC2886D1FD4ED33005D1CCC = {
+			isa = PBXGroup;
+			children = (
+				EBC288781FD4ED33005D1CCC /* Miso.TrackingMealApp */,
+				EBC2888D1FD4ED33005D1CCC /* Miso.TrackingMealAppTests */,
+				EBC288981FD4ED33005D1CCC /* Miso.TrackingMealAppUITests */,
+				EBC288771FD4ED33005D1CCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBC288771FD4ED33005D1CCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBC288761FD4ED33005D1CCC /* Miso.TrackingMealApp.app */,
+				EBC2888A1FD4ED33005D1CCC /* Miso.TrackingMealAppTests.xctest */,
+				EBC288951FD4ED33005D1CCC /* Miso.TrackingMealAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBC288781FD4ED33005D1CCC /* Miso.TrackingMealApp */ = {
+			isa = PBXGroup;
+			children = (
+				EBC288791FD4ED33005D1CCC /* AppDelegate.swift */,
+				EBC2887B1FD4ED33005D1CCC /* ViewController.swift */,
+				EBC2887D1FD4ED33005D1CCC /* Main.storyboard */,
+				EBC288801FD4ED33005D1CCC /* Assets.xcassets */,
+				EBC288821FD4ED33005D1CCC /* LaunchScreen.storyboard */,
+				EBC288851FD4ED33005D1CCC /* Info.plist */,
+			);
+			path = Miso.TrackingMealApp;
+			sourceTree = "<group>";
+		};
+		EBC2888D1FD4ED33005D1CCC /* Miso.TrackingMealAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBC2888E1FD4ED33005D1CCC /* Miso_TrackingMealAppTests.swift */,
+				EBC288901FD4ED33005D1CCC /* Info.plist */,
+			);
+			path = Miso.TrackingMealAppTests;
+			sourceTree = "<group>";
+		};
+		EBC288981FD4ED33005D1CCC /* Miso.TrackingMealAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EBC288991FD4ED33005D1CCC /* Miso_TrackingMealAppUITests.swift */,
+				EBC2889B1FD4ED33005D1CCC /* Info.plist */,
+			);
+			path = Miso.TrackingMealAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBC288751FD4ED33005D1CCC /* Miso.TrackingMealApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC2889E1FD4ED33005D1CCC /* Build configuration list for PBXNativeTarget "Miso.TrackingMealApp" */;
+			buildPhases = (
+				EBC288721FD4ED33005D1CCC /* Sources */,
+				EBC288731FD4ED33005D1CCC /* Frameworks */,
+				EBC288741FD4ED33005D1CCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Miso.TrackingMealApp;
+			productName = Miso.TrackingMealApp;
+			productReference = EBC288761FD4ED33005D1CCC /* Miso.TrackingMealApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBC288891FD4ED33005D1CCC /* Miso.TrackingMealAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC288A11FD4ED33005D1CCC /* Build configuration list for PBXNativeTarget "Miso.TrackingMealAppTests" */;
+			buildPhases = (
+				EBC288861FD4ED33005D1CCC /* Sources */,
+				EBC288871FD4ED33005D1CCC /* Frameworks */,
+				EBC288881FD4ED33005D1CCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBC2888C1FD4ED33005D1CCC /* PBXTargetDependency */,
+			);
+			name = Miso.TrackingMealAppTests;
+			productName = Miso.TrackingMealAppTests;
+			productReference = EBC2888A1FD4ED33005D1CCC /* Miso.TrackingMealAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EBC288941FD4ED33005D1CCC /* Miso.TrackingMealAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC288A41FD4ED33005D1CCC /* Build configuration list for PBXNativeTarget "Miso.TrackingMealAppUITests" */;
+			buildPhases = (
+				EBC288911FD4ED33005D1CCC /* Sources */,
+				EBC288921FD4ED33005D1CCC /* Frameworks */,
+				EBC288931FD4ED33005D1CCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBC288971FD4ED33005D1CCC /* PBXTargetDependency */,
+			);
+			name = Miso.TrackingMealAppUITests;
+			productName = Miso.TrackingMealAppUITests;
+			productReference = EBC288951FD4ED33005D1CCC /* Miso.TrackingMealAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBC2886E1FD4ED33005D1CCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Hiroka Yago";
+				TargetAttributes = {
+					EBC288751FD4ED33005D1CCC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					EBC288891FD4ED33005D1CCC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EBC288751FD4ED33005D1CCC;
+					};
+					EBC288941FD4ED33005D1CCC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EBC288751FD4ED33005D1CCC;
+					};
+				};
+			};
+			buildConfigurationList = EBC288711FD4ED33005D1CCC /* Build configuration list for PBXProject "Miso.TrackingMealApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBC2886D1FD4ED33005D1CCC;
+			productRefGroup = EBC288771FD4ED33005D1CCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBC288751FD4ED33005D1CCC /* Miso.TrackingMealApp */,
+				EBC288891FD4ED33005D1CCC /* Miso.TrackingMealAppTests */,
+				EBC288941FD4ED33005D1CCC /* Miso.TrackingMealAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBC288741FD4ED33005D1CCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC288841FD4ED33005D1CCC /* LaunchScreen.storyboard in Resources */,
+				EBC288811FD4ED33005D1CCC /* Assets.xcassets in Resources */,
+				EBC2887F1FD4ED33005D1CCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC288881FD4ED33005D1CCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC288931FD4ED33005D1CCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBC288721FD4ED33005D1CCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC2887C1FD4ED33005D1CCC /* ViewController.swift in Sources */,
+				EBC2887A1FD4ED33005D1CCC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC288861FD4ED33005D1CCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC2888F1FD4ED33005D1CCC /* Miso_TrackingMealAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC288911FD4ED33005D1CCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC2889A1FD4ED33005D1CCC /* Miso_TrackingMealAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBC2888C1FD4ED33005D1CCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBC288751FD4ED33005D1CCC /* Miso.TrackingMealApp */;
+			targetProxy = EBC2888B1FD4ED33005D1CCC /* PBXContainerItemProxy */;
+		};
+		EBC288971FD4ED33005D1CCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBC288751FD4ED33005D1CCC /* Miso.TrackingMealApp */;
+			targetProxy = EBC288961FD4ED33005D1CCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBC2887D1FD4ED33005D1CCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC2887E1FD4ED33005D1CCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBC288821FD4ED33005D1CCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC288831FD4ED33005D1CCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBC2889C1FD4ED33005D1CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBC2889D1FD4ED33005D1CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBC2889F1FD4ED33005D1CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Miso.TrackingMealApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBC288A01FD4ED33005D1CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Miso.TrackingMealApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBC288A21FD4ED33005D1CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Miso.TrackingMealAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Miso.TrackingMealApp.app/Miso.TrackingMealApp";
+			};
+			name = Debug;
+		};
+		EBC288A31FD4ED33005D1CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Miso.TrackingMealAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Miso.TrackingMealApp.app/Miso.TrackingMealApp";
+			};
+			name = Release;
+		};
+		EBC288A51FD4ED33005D1CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Miso.TrackingMealAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Miso.TrackingMealApp;
+			};
+			name = Debug;
+		};
+		EBC288A61FD4ED33005D1CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Miso.TrackingMealAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Miso.TrackingMealApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBC288711FD4ED33005D1CCC /* Build configuration list for PBXProject "Miso.TrackingMealApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC2889C1FD4ED33005D1CCC /* Debug */,
+				EBC2889D1FD4ED33005D1CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC2889E1FD4ED33005D1CCC /* Build configuration list for PBXNativeTarget "Miso.TrackingMealApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC2889F1FD4ED33005D1CCC /* Debug */,
+				EBC288A01FD4ED33005D1CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC288A11FD4ED33005D1CCC /* Build configuration list for PBXNativeTarget "Miso.TrackingMealAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC288A21FD4ED33005D1CCC /* Debug */,
+				EBC288A31FD4ED33005D1CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC288A41FD4ED33005D1CCC /* Build configuration list for PBXNativeTarget "Miso.TrackingMealAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC288A51FD4ED33005D1CCC /* Debug */,
+				EBC288A61FD4ED33005D1CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBC2886E1FD4ED33005D1CCC /* Project object */;
+}
