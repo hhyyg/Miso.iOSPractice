@@ -132,6 +132,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBC2889E1FD4ED33005D1CCC /* Build configuration list for PBXNativeTarget "Miso.TrackingMealApp" */;
 			buildPhases = (
+				EB1494701FD50D1E0000EDA9 /* SwfitLint */,
 				EBC288721FD4ED33005D1CCC /* Sources */,
 				EBC288731FD4ED33005D1CCC /* Frameworks */,
 				EBC288741FD4ED33005D1CCC /* Resources */,
@@ -253,6 +254,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EB1494701FD50D1E0000EDA9 /* SwfitLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwfitLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EBC288721FD4ED33005D1CCC /* Sources */ = {
@@ -427,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
 				INFOPLIST_FILE = Miso.TrackingMealApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealApp";
@@ -441,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
 				INFOPLIST_FILE = Miso.TrackingMealApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealApp";
