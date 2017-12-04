@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Miso_TrackingMealAppUITests: XCTestCase {
+class TrackingMealAppUITests: XCTestCase {
 
     override func setUp() {
         super.setUp()

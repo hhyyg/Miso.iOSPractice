@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Tracking
+@testable import TrackingMealApp
 
 class MealTest: XCTestCase {
 
@@ -33,4 +33,8 @@ class MealTest: XCTestCase {
         }
     }
 
+    func testMealInitializationSucceeds() {
+        let zeroRatingMeal = Meal(name: "Zero", photo: nil, rating: 0)
+        XCTAssertNotNil(zeroRatingMeal)
+    }
 }
