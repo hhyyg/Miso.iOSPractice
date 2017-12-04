@@ -8,8 +8,7 @@
 
 import UIKit
 
- @IBDesignable class RatingControl: UIStackView {
-
+@IBDesignable class RatingControl: UIStackView {
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
             setupButtons()

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EB1494721FD5234B0000EDA9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1494711FD5234B0000EDA9 /* RatingControl.swift */; };
+		EB1494741FD538C50000EDA9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1494731FD538C50000EDA9 /* Meal.swift */; };
+		EB1494761FD5395D0000EDA9 /* MealTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1494751FD5395D0000EDA9 /* MealTest.swift */; };
 		EBC2887A1FD4ED33005D1CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC288791FD4ED33005D1CCC /* AppDelegate.swift */; };
 		EBC2887C1FD4ED33005D1CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2887B1FD4ED33005D1CCC /* ViewController.swift */; };
 		EBC2887F1FD4ED33005D1CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC2887D1FD4ED33005D1CCC /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		EB1494711FD5234B0000EDA9 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		EB1494731FD538C50000EDA9 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		EB1494751FD5395D0000EDA9 /* MealTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTest.swift; sourceTree = "<group>"; };
 		EBC288761FD4ED33005D1CCC /* Miso.TrackingMealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Miso.TrackingMealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC288791FD4ED33005D1CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBC2887B1FD4ED33005D1CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				EBC288801FD4ED33005D1CCC /* Assets.xcassets */,
 				EBC288821FD4ED33005D1CCC /* LaunchScreen.storyboard */,
 				EBC288851FD4ED33005D1CCC /* Info.plist */,
+				EB1494731FD538C50000EDA9 /* Meal.swift */,
 			);
 			path = Miso.TrackingMealApp;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			children = (
 				EBC2888E1FD4ED33005D1CCC /* Miso_TrackingMealAppTests.swift */,
 				EBC288901FD4ED33005D1CCC /* Info.plist */,
+				EB1494751FD5395D0000EDA9 /* MealTest.swift */,
 			);
 			path = Miso.TrackingMealAppTests;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1494741FD538C50000EDA9 /* Meal.swift in Sources */,
 				EBC2887C1FD4ED33005D1CCC /* ViewController.swift in Sources */,
 				EB1494721FD5234B0000EDA9 /* RatingControl.swift in Sources */,
 				EBC2887A1FD4ED33005D1CCC /* AppDelegate.swift in Sources */,
@@ -290,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1494761FD5395D0000EDA9 /* MealTest.swift in Sources */,
 				EBC2888F1FD4ED33005D1CCC /* Miso_TrackingMealAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +460,7 @@
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
 				INFOPLIST_FILE = Miso.TrackingMealApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.TrackingMealApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,7 +475,7 @@
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
 				INFOPLIST_FILE = Miso.TrackingMealApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.TrackingMealApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
