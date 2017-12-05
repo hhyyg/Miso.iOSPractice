@@ -15,6 +15,7 @@
 		EB48FEAF1FD65BA500826584 /* UIImageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48FEAE1FD65BA500826584 /* UIImageWrapper.swift */; };
 		EB48FEB11FD65F5500826584 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48FEB01FD65F5500826584 /* AppError.swift */; };
 		EB48FEB31FD65FC500826584 /* UIImageWrapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48FEB21FD65FC500826584 /* UIImageWrapperTest.swift */; };
+		EB48FEB51FD6738500826584 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48FEB41FD6738500826584 /* Log.swift */; };
 		EBC2887A1FD4ED33005D1CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC288791FD4ED33005D1CCC /* AppDelegate.swift */; };
 		EBC2887C1FD4ED33005D1CCC /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2887B1FD4ED33005D1CCC /* MealViewController.swift */; };
 		EBC2887F1FD4ED33005D1CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC2887D1FD4ED33005D1CCC /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		EB48FEAE1FD65BA500826584 /* UIImageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageWrapper.swift; sourceTree = "<group>"; };
 		EB48FEB01FD65F5500826584 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		EB48FEB21FD65FC500826584 /* UIImageWrapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageWrapperTest.swift; sourceTree = "<group>"; };
+		EB48FEB41FD6738500826584 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		EBC288761FD4ED33005D1CCC /* TrackingMealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackingMealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC288791FD4ED33005D1CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBC2887B1FD4ED33005D1CCC /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		EBC288781FD4ED33005D1CCC /* TrackingMealApp */ = {
 			isa = PBXGroup;
 			children = (
+				EB48FEB41FD6738500826584 /* Log.swift */,
 				EBC288791FD4ED33005D1CCC /* AppDelegate.swift */,
 				EBC2887B1FD4ED33005D1CCC /* MealViewController.swift */,
 				EB1494711FD5234B0000EDA9 /* RatingControl.swift */,
@@ -303,6 +306,7 @@
 			files = (
 				EB1494741FD538C50000EDA9 /* Meal.swift in Sources */,
 				EB48FEB11FD65F5500826584 /* AppError.swift in Sources */,
+				EB48FEB51FD6738500826584 /* Log.swift in Sources */,
 				EBC2887C1FD4ED33005D1CCC /* MealViewController.swift in Sources */,
 				EB1494721FD5234B0000EDA9 /* RatingControl.swift in Sources */,
 				EB48FEAF1FD65BA500826584 /* UIImageWrapper.swift in Sources */,

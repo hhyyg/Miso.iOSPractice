@@ -99,7 +99,7 @@ class MealTableViewController: UITableViewController {
 
         switch(segue.identifier ?? "") {
         case "AddItem":
-            os_log("Adding a new meal.", log: OSLog.default, type: .debug)
+            logger.debug("Adding a new meal.")
         case "ShowDetail":
             guard let mealDeatailViewController = segue.destination as? MealViewController else {
                 fatalError()
@@ -143,7 +143,7 @@ class MealTableViewController: UITableViewController {
             try saveMealsToFile()
 
             print("url: \(Meal.archiveUrl)")
-            os_log("Meals successfully saved", log: OSLog.default, type: .debug)
+            logger.debug("Meals successfully saved")
         } catch {
             fatalError(error.localizedDescription)
         }
@@ -170,7 +170,7 @@ class MealTableViewController: UITableViewController {
             let meals = try JSONDecoder().decode([Meal].self, from: data)
             return meals
         } else {
-            os_log("no data", log: OSLog.default, type: .debug)
+            logger.debug("no data")
             return nil
         }
     }
