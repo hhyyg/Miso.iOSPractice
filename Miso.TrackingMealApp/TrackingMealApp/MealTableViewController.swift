@@ -17,7 +17,7 @@ class MealTableViewController: UITableViewController {
         super.viewDidLoad()
 
         navigationItem.leftBarButtonItem = editButtonItem
-        if let savedMeals = loadMeals() {
+        if let savedMeals = try! loadMeals() {
             meals += savedMeals
         } else {
             loadSampleMeals()
@@ -89,7 +89,7 @@ class MealTableViewController: UITableViewController {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
 
-            saveMeals()
+            try! saveMeals()
         }
     }
 
@@ -131,47 +131,21 @@ class MealTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             meals.remove(at: indexPath.row)
-            saveMeals()
+            try! saveMeals()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
 
-    private func saveMeals() {
-        do {
-            try saveMealsToFile()
+    private func saveMeals() throws {
+        try FileStorage.store(atPath: Meal.archiveUrl, value: meals)
 
-            print("url: \(Meal.archiveUrl)")
-            logger.debug("Meals successfully saved")
-        } catch {
-            fatalError(error.localizedDescription)
-        }
+        print("url: \(Meal.archiveUrl)")
+        logger.debug("Meals successfully saved")
     }
 
-    private func loadMeals() -> [Meal]? {
-        do {
-            return try loadMealsFromFile()
-        } catch {
-            fatalError(error.localizedDescription)
-        }
-    }
-
-    private func saveMealsToFile() throws {
-        let data = try JSONEncoder().encode(meals)
-        if FileManager.default.fileExists(atPath: Meal.archiveUrl) {
-            try FileManager.default.removeItem(at: URL(fileURLWithPath: Meal.archiveUrl))
-        }
-        FileManager.default.createFile(atPath: Meal.archiveUrl, contents: data, attributes: nil)
-    }
-
-    private func loadMealsFromFile() throws -> [Meal]? {
-        if let data = FileManager.default.contents(atPath: Meal.archiveUrl) {
-            let meals = try JSONDecoder().decode([Meal].self, from: data)
-            return meals
-        } else {
-            logger.debug("no data")
-            return nil
-        }
+    private func loadMeals() throws -> [Meal]? {
+        return try FileStorage.retrive(atPath: Meal.archiveUrl)
     }
 }
