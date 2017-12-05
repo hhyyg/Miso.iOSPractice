@@ -20,19 +20,10 @@
 		EBC2887F1FD4ED33005D1CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC2887D1FD4ED33005D1CCC /* Main.storyboard */; };
 		EBC288811FD4ED33005D1CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC288801FD4ED33005D1CCC /* Assets.xcassets */; };
 		EBC288841FD4ED33005D1CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC288821FD4ED33005D1CCC /* LaunchScreen.storyboard */; };
-		EBC2888F1FD4ED33005D1CCC /* TrackingMealAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2888E1FD4ED33005D1CCC /* TrackingMealAppTests.swift */; };
-		EBC2889A1FD4ED33005D1CCC /* TrackingMealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC288991FD4ED33005D1CCC /* TrackingMealAppUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		EBC2888B1FD4ED33005D1CCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBC2886E1FD4ED33005D1CCC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EBC288751FD4ED33005D1CCC;
-			remoteInfo = TrackingMealApp;
-		};
-		EBC288961FD4ED33005D1CCC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBC2886E1FD4ED33005D1CCC /* Project object */;
 			proxyType = 1;
@@ -58,11 +49,7 @@
 		EBC288831FD4ED33005D1CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBC288851FD4ED33005D1CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBC2888A1FD4ED33005D1CCC /* TrackingMealAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackingMealAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBC2888E1FD4ED33005D1CCC /* TrackingMealAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingMealAppTests.swift; sourceTree = "<group>"; };
 		EBC288901FD4ED33005D1CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBC288951FD4ED33005D1CCC /* TrackingMealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackingMealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBC288991FD4ED33005D1CCC /* TrackingMealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingMealAppUITests.swift; sourceTree = "<group>"; };
-		EBC2889B1FD4ED33005D1CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +67,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EBC288921FD4ED33005D1CCC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,7 +75,6 @@
 			children = (
 				EBC288781FD4ED33005D1CCC /* TrackingMealApp */,
 				EBC2888D1FD4ED33005D1CCC /* TrackingMealAppTests */,
-				EBC288981FD4ED33005D1CCC /* TrackingMealAppUITests */,
 				EBC288771FD4ED33005D1CCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,7 +84,6 @@
 			children = (
 				EBC288761FD4ED33005D1CCC /* TrackingMealApp.app */,
 				EBC2888A1FD4ED33005D1CCC /* TrackingMealAppTests.xctest */,
-				EBC288951FD4ED33005D1CCC /* TrackingMealAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,20 +111,10 @@
 		EBC2888D1FD4ED33005D1CCC /* TrackingMealAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBC2888E1FD4ED33005D1CCC /* TrackingMealAppTests.swift */,
 				EBC288901FD4ED33005D1CCC /* Info.plist */,
 				EB1494751FD5395D0000EDA9 /* MealTest.swift */,
 			);
 			path = TrackingMealAppTests;
-			sourceTree = "<group>";
-		};
-		EBC288981FD4ED33005D1CCC /* TrackingMealAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EBC288991FD4ED33005D1CCC /* TrackingMealAppUITests.swift */,
-				EBC2889B1FD4ED33005D1CCC /* Info.plist */,
-			);
-			path = TrackingMealAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,24 +156,6 @@
 			productReference = EBC2888A1FD4ED33005D1CCC /* TrackingMealAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EBC288941FD4ED33005D1CCC /* TrackingMealAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EBC288A41FD4ED33005D1CCC /* Build configuration list for PBXNativeTarget "TrackingMealAppUITests" */;
-			buildPhases = (
-				EBC288911FD4ED33005D1CCC /* Sources */,
-				EBC288921FD4ED33005D1CCC /* Frameworks */,
-				EBC288931FD4ED33005D1CCC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EBC288971FD4ED33005D1CCC /* PBXTargetDependency */,
-			);
-			name = TrackingMealAppUITests;
-			productName = TrackingMealAppUITests;
-			productReference = EBC288951FD4ED33005D1CCC /* TrackingMealAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,11 +171,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					EBC288891FD4ED33005D1CCC = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = EBC288751FD4ED33005D1CCC;
-					};
-					EBC288941FD4ED33005D1CCC = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EBC288751FD4ED33005D1CCC;
@@ -247,7 +192,6 @@
 			targets = (
 				EBC288751FD4ED33005D1CCC /* TrackingMealApp */,
 				EBC288891FD4ED33005D1CCC /* TrackingMealAppTests */,
-				EBC288941FD4ED33005D1CCC /* TrackingMealAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,13 +208,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EBC288881FD4ED33005D1CCC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EBC288931FD4ED33005D1CCC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,15 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1494761FD5395D0000EDA9 /* MealTest.swift in Sources */,
-				EBC2888F1FD4ED33005D1CCC /* TrackingMealAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EBC288911FD4ED33005D1CCC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EBC2889A1FD4ED33005D1CCC /* TrackingMealAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,11 +265,6 @@
 			isa = PBXTargetDependency;
 			target = EBC288751FD4ED33005D1CCC /* TrackingMealApp */;
 			targetProxy = EBC2888B1FD4ED33005D1CCC /* PBXContainerItemProxy */;
-		};
-		EBC288971FD4ED33005D1CCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EBC288751FD4ED33005D1CCC /* TrackingMealApp */;
-			targetProxy = EBC288961FD4ED33005D1CCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -536,36 +459,6 @@
 			};
 			name = Release;
 		};
-		EBC288A51FD4ED33005D1CCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TrackingMealAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealAppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrackingMealApp;
-			};
-			name = Debug;
-		};
-		EBC288A61FD4ED33005D1CCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TrackingMealAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miso.TrackingMealApp.Miso-TrackingMealAppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrackingMealApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -592,15 +485,6 @@
 			buildConfigurations = (
 				EBC288A21FD4ED33005D1CCC /* Debug */,
 				EBC288A31FD4ED33005D1CCC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EBC288A41FD4ED33005D1CCC /* Build configuration list for PBXNativeTarget "TrackingMealAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EBC288A51FD4ED33005D1CCC /* Debug */,
-				EBC288A61FD4ED33005D1CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
