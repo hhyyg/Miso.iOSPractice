@@ -134,13 +134,13 @@ class MealTableViewController: UITableViewController {
     }
 
     private func saveMeals() throws {
-        try FileStorage.store(atPath: Meal.archiveUrl, value: meals)
+        try FileStorage.store(at: Meal.archiveUrl, value: meals)
 
         print("url: \(Meal.archiveUrl)")
         logger.debug("Meals successfully saved")
     }
 
     private func loadMeals() throws -> [Meal]? {
-        return try FileStorage.retrive(atPath: Meal.archiveUrl)
+        return try FileStorage.retrive(at: Meal.archiveUrl)
     }
 }

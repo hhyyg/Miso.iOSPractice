@@ -15,10 +15,10 @@ class Meal: Codable {
     var photoData: Data?
     var rating: Int
 
-    static var archiveUrl: String = {
+    static var archiveUrl: URL = {
         var documentDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
         documentDirectory.appendPathComponent("meals")
-        return documentDirectory.path
+        return documentDirectory
     }()
 
     init?(name: String, photo: UIImage?, rating: Int) {

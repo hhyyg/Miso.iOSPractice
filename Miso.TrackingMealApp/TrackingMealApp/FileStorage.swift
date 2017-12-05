@@ -9,16 +9,19 @@
 import Foundation
 
 class FileStorage {
-    static func store<T: Encodable>(atPath pathString: String, value: T) throws {
+
+    static let fileManager = FileManager.default
+
+    static func store<T: Encodable>(at url: URL, value: T) throws {
         let data = try JSONEncoder().encode(value)
-        if FileManager.default.fileExists(atPath: pathString) {
-            try FileManager.default.removeItem(at: URL(fileURLWithPath: pathString))
+        if fileManager.fileExists(atPath: url.path) {
+            try fileManager.removeItem(at: url)
         }
-        FileManager.default.createFile(atPath: pathString, contents: data, attributes: nil)
+        fileManager.createFile(atPath: url.path, contents: data, attributes: nil)
     }
 
-    static func retrive<T: Decodable>(atPath pathString: String) throws -> T? {
-        if let data = FileManager.default.contents(atPath: pathString) {
+    static func retrive<T: Decodable>(at url: URL) throws -> T? {
+        if let data = fileManager.contents(atPath: url.path) {
             return try JSONDecoder().decode(T.self, from: data)
         } else {
             return nil
