@@ -9,7 +9,7 @@
 import Foundation
 
 class FileStorage {
-    static func store<T>(atPath pathString: String, value: T) throws where T: Encodable {
+    static func store<T: Encodable>(atPath pathString: String, value: T) throws {
         let data = try JSONEncoder().encode(value)
         if FileManager.default.fileExists(atPath: pathString) {
             try FileManager.default.removeItem(at: URL(fileURLWithPath: pathString))
@@ -17,7 +17,7 @@ class FileStorage {
         FileManager.default.createFile(atPath: pathString, contents: data, attributes: nil)
     }
 
-    static func retrive<T>(atPath pathString: String) throws -> T? where T: Decodable {
+    static func retrive<T: Decodable>(atPath pathString: String) throws -> T? {
         if let data = FileManager.default.contents(atPath: pathString) {
             return try JSONDecoder().decode(T.self, from: data)
         } else {
