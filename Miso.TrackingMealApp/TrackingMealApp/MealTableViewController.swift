@@ -17,7 +17,7 @@ class MealTableViewController: UITableViewController {
         super.viewDidLoad()
 
         navigationItem.leftBarButtonItem = editButtonItem
-        if let savedMeals = try! loadMeals() {
+        if let savedMeals = loadMeals() {
             meals += savedMeals
         } else {
             loadSampleMeals()
@@ -89,7 +89,7 @@ class MealTableViewController: UITableViewController {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
 
-            try! saveMeals()
+            saveMeals()
         }
     }
 
@@ -128,19 +128,19 @@ class MealTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             meals.remove(at: indexPath.row)
-            try! saveMeals()
+            saveMeals()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
 
-    private func saveMeals() throws {
-        try FileStorage.store(at: Meal.archiveUrl, value: meals)
+    private func saveMeals() {
+        FileStorage.store(at: Meal.archiveUrl, value: meals)
 
         print("url: \(Meal.archiveUrl)")
         logger.debug("Meals successfully saved")
     }
 
-    private func loadMeals() throws -> [Meal]? {
-        return try FileStorage.retrive(at: Meal.archiveUrl)
+    private func loadMeals() -> [Meal]? {
+        return FileStorage.retrive(at: Meal.archiveUrl)
     }
 }
