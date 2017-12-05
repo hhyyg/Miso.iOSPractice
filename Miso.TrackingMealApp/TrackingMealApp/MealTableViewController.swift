@@ -139,42 +139,39 @@ class MealTableViewController: UITableViewController {
     }
 
     private func saveMeals() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.archiveUrl)
+        do {
+            try saveMealsToFile()
 
-        if isSuccessfulSave {
-            os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
-        } else {
-            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+            print("url: \(Meal.archiveUrl)")
+            os_log("Meals successfully saved", log: OSLog.default, type: .debug)
+        } catch {
+            fatalError(error.localizedDescription)
         }
     }
 
     private func loadMeals() -> [Meal]? {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Meal.archiveUrl) as? [Meal]
+        do {
+            return try loadMealsFromFile()
+        } catch {
+            fatalError(error.localizedDescription)
+        }
     }
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    private func saveMealsToFile() throws {
+        let data = try JSONEncoder().encode(meals)
+        if FileManager.default.fileExists(atPath: Meal.archiveUrl) {
+            try FileManager.default.removeItem(at: URL(fileURLWithPath: Meal.archiveUrl))
+        }
+        FileManager.default.createFile(atPath: Meal.archiveUrl, contents: data, attributes: nil)
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    private func loadMealsFromFile() throws -> [Meal]? {
+        if let data = FileManager.default.contents(atPath: Meal.archiveUrl) {
+            let meals = try JSONDecoder().decode([Meal].self, from: data)
+            return meals
+        } else {
+            os_log("no data", log: OSLog.default, type: .debug)
+            return nil
+        }
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
