@@ -12,9 +12,7 @@
 		EB1494761FD5395D0000EDA9 /* MealTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1494751FD5395D0000EDA9 /* MealTest.swift */; };
 		EB247AFB1FD54A1C007BE240 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB247AFA1FD54A1C007BE240 /* MealTableViewCell.swift */; };
 		EB247AFD1FD55FB6007BE240 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB247AFC1FD55FB6007BE240 /* MealTableViewController.swift */; };
-		EB48FEAF1FD65BA500826584 /* UIImageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48FEAE1FD65BA500826584 /* UIImageWrapper.swift */; };
 		EB48FEB11FD65F5500826584 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48FEB01FD65F5500826584 /* AppError.swift */; };
-		EB48FEB31FD65FC500826584 /* UIImageWrapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48FEB21FD65FC500826584 /* UIImageWrapperTest.swift */; };
 		EB48FEB51FD6738500826584 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48FEB41FD6738500826584 /* Log.swift */; };
 		EB48FEB71FD6841000826584 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48FEB61FD6841000826584 /* FileStorage.swift */; };
 		EBC2887A1FD4ED33005D1CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC288791FD4ED33005D1CCC /* AppDelegate.swift */; };
@@ -49,9 +47,7 @@
 		EB1494751FD5395D0000EDA9 /* MealTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTest.swift; sourceTree = "<group>"; };
 		EB247AFA1FD54A1C007BE240 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		EB247AFC1FD55FB6007BE240 /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
-		EB48FEAE1FD65BA500826584 /* UIImageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageWrapper.swift; sourceTree = "<group>"; };
 		EB48FEB01FD65F5500826584 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		EB48FEB21FD65FC500826584 /* UIImageWrapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageWrapperTest.swift; sourceTree = "<group>"; };
 		EB48FEB41FD6738500826584 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		EB48FEB61FD6841000826584 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		EBC288761FD4ED33005D1CCC /* TrackingMealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackingMealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +124,6 @@
 				EB1494731FD538C50000EDA9 /* Meal.swift */,
 				EB247AFA1FD54A1C007BE240 /* MealTableViewCell.swift */,
 				EB247AFC1FD55FB6007BE240 /* MealTableViewController.swift */,
-				EB48FEAE1FD65BA500826584 /* UIImageWrapper.swift */,
 				EB48FEB01FD65F5500826584 /* AppError.swift */,
 				EB48FEB61FD6841000826584 /* FileStorage.swift */,
 			);
@@ -141,7 +136,6 @@
 				EBC2888E1FD4ED33005D1CCC /* TrackingMealAppTests.swift */,
 				EBC288901FD4ED33005D1CCC /* Info.plist */,
 				EB1494751FD5395D0000EDA9 /* MealTest.swift */,
-				EB48FEB21FD65FC500826584 /* UIImageWrapperTest.swift */,
 			);
 			path = TrackingMealAppTests;
 			sourceTree = "<group>";
@@ -313,7 +307,6 @@
 				EB48FEB51FD6738500826584 /* Log.swift in Sources */,
 				EBC2887C1FD4ED33005D1CCC /* MealViewController.swift in Sources */,
 				EB1494721FD5234B0000EDA9 /* RatingControl.swift in Sources */,
-				EB48FEAF1FD65BA500826584 /* UIImageWrapper.swift in Sources */,
 				EBC2887A1FD4ED33005D1CCC /* AppDelegate.swift in Sources */,
 				EB247AFD1FD55FB6007BE240 /* MealTableViewController.swift in Sources */,
 				EB247AFB1FD54A1C007BE240 /* MealTableViewCell.swift in Sources */,
@@ -325,7 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1494761FD5395D0000EDA9 /* MealTest.swift in Sources */,
-				EB48FEB31FD65FC500826584 /* UIImageWrapperTest.swift in Sources */,
 				EBC2888F1FD4ED33005D1CCC /* TrackingMealAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

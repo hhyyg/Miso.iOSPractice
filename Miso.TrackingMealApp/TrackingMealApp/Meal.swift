@@ -12,7 +12,7 @@ import os.log
 
 class Meal: Codable {
     var name: String
-    var photo: UIImageWrapper?
+    var photoData: Data?
     var rating: Int
 
     static var archiveUrl: String = {
@@ -32,9 +32,16 @@ class Meal: Codable {
         }
         self.name = name
         if let photo = photo {
-            self.photo = UIImageWrapper(image: photo)
+            self.photoData = UIImagePNGRepresentation(photo)
         }
         self.rating = rating
+    }
+
+    func getPhotoImage() -> UIImage? {
+        if let photoData = photoData {
+            return UIImage(data: photoData)
+        }
+        return nil
     }
 
 }
