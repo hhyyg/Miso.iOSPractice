@@ -26,7 +26,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         if let meal = meal {
             navigationItem.title = meal.name
             nameTextField.text = meal.name
-            photoImageView.image = meal.photo
+            photoImageView.image = meal.photo?.image
             ratingControl.rating = meal.rating
         }
 

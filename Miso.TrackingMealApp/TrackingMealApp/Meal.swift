@@ -12,7 +12,7 @@ import os.log
 
 class Meal: NSObject, NSCoding {
     var name: String
-    var photo: UIImage?
+    var photo: UIImageWrapper?
     var rating: Int
 
     static var archiveUrl: String {
@@ -31,7 +31,9 @@ class Meal: NSObject, NSCoding {
             return nil
         }
         self.name = name
-        self.photo = photo
+        if let photo = photo {
+            self.photo = UIImageWrapper(image: photo)
+        }
         self.rating = rating
     }
 
@@ -55,7 +57,7 @@ class Meal: NSObject, NSCoding {
 
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: PropertyKey.name)
-        aCoder.encode(photo, forKey: PropertyKey.photo)
+        aCoder.encode(photo?.image, forKey: PropertyKey.photo)
         aCoder.encode(rating, forKey: PropertyKey.rating)
     }
 
