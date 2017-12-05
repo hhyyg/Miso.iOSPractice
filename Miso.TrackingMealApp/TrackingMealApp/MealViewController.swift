@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import os.log
 
 class MealViewController: UIViewController, UINavigationControllerDelegate {
 
@@ -26,7 +25,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         if let meal = meal {
             navigationItem.title = meal.name
             nameTextField.text = meal.name
-            photoImageView.image = meal.photo
+            photoImageView.image = meal.getPhotoImage()
             ratingControl.rating = meal.rating
         }
 
@@ -52,7 +51,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
 
         guard let button = sender as? UIBarButtonItem,
             button === saveButton else {
-                os_log("The save button wat not pressed, cancelling", log: OSLog.default, type: .debug)
+            logger.debug("The save button wat not pressed, cancelling")
                 return
         }
 
@@ -70,7 +69,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         } else if let owningNavigationController = navigationController {
             owningNavigationController.popViewController(animated: true)
         } else {
-            fatalError("The MealViewController is not inside a navigation controller.")
+            logger.error("The MealViewController is not inside a navigation controller.")
         }
     }
 }
