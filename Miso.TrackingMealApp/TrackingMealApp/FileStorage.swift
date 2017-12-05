@@ -10,7 +10,7 @@ import Foundation
 
 class FileStorage {
 
-    static let fm = FileManager.default
+    private static let fm = FileManager.default
 
     static func store<T: Encodable>(at url: URL, value: T) {
         let data = try! JSONEncoder().encode(value)
