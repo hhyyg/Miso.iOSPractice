@@ -72,6 +72,15 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
             logger.error("The MealViewController is not inside a navigation controller.")
         }
     }
+
+    override var previewActionItems: [UIPreviewActionItem] {
+
+        let deleteAction = UIPreviewAction(title: "Delete", style: .destructive) { (action, previewViewController ) in
+            logger.debug("delete action")
+        }
+
+        return [deleteAction]
+    }
 }
 
 extension MealViewController: UITextFieldDelegate {
