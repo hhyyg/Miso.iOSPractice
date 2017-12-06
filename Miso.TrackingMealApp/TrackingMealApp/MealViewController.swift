@@ -16,6 +16,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var ratingControl: RatingControl!
 
     var meal: Meal?
+    let feedBackGenerator = UINotificationFeedbackGenerator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +61,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         let rating = ratingControl.rating
 
         meal = Meal(name: name, photo: photo, rating: rating)
+        feedBackGenerator.notificationOccurred(.success)
     }
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
