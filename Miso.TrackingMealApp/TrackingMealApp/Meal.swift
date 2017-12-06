@@ -14,6 +14,7 @@ class Meal: Codable {
     var name: String
     var photoData: Data?
     var rating: Int
+    var id: String
 
     static var archiveUrl: URL = {
         var documentDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -30,6 +31,7 @@ class Meal: Codable {
         guard (rating >= 0) && (rating <= 5) else {
             return nil
         }
+        self.id = UUID().uuidString
         self.name = name
         if let photo = photo {
             self.photoData = UIImagePNGRepresentation(photo)

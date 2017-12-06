@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MealViewControllerDelegate: class {
+    func mealViewController(_ viewController: MealViewController, mealDeleteDidTap meal: Meal)
+}
+
 class MealViewController: UIViewController, UINavigationControllerDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
@@ -15,7 +19,13 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var ratingControl: RatingControl!
 
-    var meal: Meal?
+    public private(set) var meal: Meal?
+    private weak var delegate: MealViewControllerDelegate!
+
+    func set(delegate: MealViewControllerDelegate, meal: Meal) {
+        self.delegate = delegate
+        self.meal = meal
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +44,6 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
@@ -76,7 +85,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     override var previewActionItems: [UIPreviewActionItem] {
 
         let deleteAction = UIPreviewAction(title: "Delete", style: .destructive) { (action, previewViewController ) in
-            logger.debug("delete action")
+            self.delegate!.mealViewController(self, mealDeleteDidTap: self.meal!)
         }
 
         return [deleteAction]
@@ -108,7 +117,6 @@ extension MealViewController: UITextFieldDelegate {
 
 extension MealViewController: UIImagePickerControllerDelegate {
 
-    //MARK UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
