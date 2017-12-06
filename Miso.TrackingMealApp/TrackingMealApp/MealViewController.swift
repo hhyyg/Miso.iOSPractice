@@ -34,7 +34,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     private func configurePhotoImageView() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(selectImageFromPhotoLibrary(_:)))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(photoImageViewDidTap(_:)))
         photoImageView.isUserInteractionEnabled = true
         photoImageView.addGestureRecognizer(gesture)
     }
@@ -44,8 +44,8 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    @objc func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
-        feedback.occurred(scene: .willSelectPhoto)
+    @objc func photoImageViewDidTap(_ sender: UITapGestureRecognizer) {
+        feedback.occur(scene: .willSelectPhoto)
         nameTextField.resignFirstResponder()
 
         let imagePickerController = UIImagePickerController()
@@ -68,7 +68,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         let rating = ratingControl.rating
 
         meal = Meal(name: name, photo: photo, rating: rating)
-        feedback.occurred(scene: .itemSaved)
+        feedback.occur(scene: .itemSaved)
     }
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {

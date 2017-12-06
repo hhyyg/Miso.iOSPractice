@@ -19,7 +19,7 @@ class Feedback {
     private let impact = UIImpactFeedbackGenerator(style: .medium)
     private let notification = UINotificationFeedbackGenerator()
 
-    func occurred(scene: Feedback.Scene) {
+    func occur(scene: Feedback.Scene) {
         switch scene {
         case .itemSaved:
             notification.notificationOccurred(.success)
