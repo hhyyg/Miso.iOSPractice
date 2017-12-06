@@ -16,12 +16,18 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var ratingControl: RatingControl!
 
     var meal: Meal?
-    let feedBackGenerator = UINotificationFeedbackGenerator()
+    let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+    let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectImageFromPhotoLibrary(_:)))
         photoImageView.isUserInteractionEnabled = true
+        photoImageView.addGestureRecognizer(tapGesture)
+
+        notificationFeedbackGenerator.prepare()
+        impactFeedbackGenerator.prepare()
 
         if let meal = meal {
             navigationItem.title = meal.name
@@ -38,7 +44,8 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+    @objc func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        impactFeedbackGenerator.impactOccurred()
         nameTextField.resignFirstResponder()
 
         let imagePickerController = UIImagePickerController()
@@ -61,7 +68,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         let rating = ratingControl.rating
 
         meal = Meal(name: name, photo: photo, rating: rating)
-        feedBackGenerator.notificationOccurred(.success)
+        notificationFeedbackGenerator.notificationOccurred(.success)
     }
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
