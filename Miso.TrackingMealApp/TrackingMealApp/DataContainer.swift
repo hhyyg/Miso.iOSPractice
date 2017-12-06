@@ -12,7 +12,16 @@ import UIKit
 struct DataContainer {
     static var meals = [Meal]()
 
-    static func loadSampleMeals() {
+    static func loadFromStorage() {
+        meals = FileStorage.retrive(at: Meal.archiveUrl) ?? createSampleMeals()
+    }
+
+    static func save() {
+        FileStorage.store(at: Meal.archiveUrl, value: meals)
+        logger.debug("Meals successfully saved")
+    }
+
+    static private func createSampleMeals() -> [Meal] {
         let photo1 = UIImage(named: "meal1")
         let photo2 = UIImage(named: "meal2")
         let photo3 = UIImage(named: "meal3")
@@ -27,6 +36,6 @@ struct DataContainer {
             fatalError("Unable to instantiate meal2")
         }
 
-        DataContainer.meals += [meal1, meal2, meal3]
+        return [meal1, meal2, meal3]
     }
 }

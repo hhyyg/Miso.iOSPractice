@@ -15,11 +15,6 @@ class MealTableViewController: UITableViewController {
         super.viewDidLoad()
 
         navigationItem.leftBarButtonItem = editButtonItem
-        if let savedMeals = loadMeals() {
-            DataContainer.meals += savedMeals
-        } else {
-            DataContainer.loadSampleMeals()
-        }
         self.tableView.reloadData()
 
         if self.traitCollection.forceTouchCapability == UIForceTouchCapability.available {
@@ -119,14 +114,7 @@ class MealTableViewController: UITableViewController {
     }
 
     private func saveMeals() {
-        FileStorage.store(at: Meal.archiveUrl, value: DataContainer.meals)
-
-        print("url: \(Meal.archiveUrl)")
-        logger.debug("Meals successfully saved")
-    }
-
-    private func loadMeals() -> [Meal]? {
-        return FileStorage.retrive(at: Meal.archiveUrl)
+        DataContainer.save()
     }
 }
 
