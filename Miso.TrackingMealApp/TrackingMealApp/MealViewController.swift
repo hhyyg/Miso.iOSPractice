@@ -16,18 +16,12 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var ratingControl: RatingControl!
 
     var meal: Meal?
-    let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
-    let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+    private let feedback = Feedback()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectImageFromPhotoLibrary(_:)))
-        photoImageView.isUserInteractionEnabled = true
-        photoImageView.addGestureRecognizer(tapGesture)
-
-        notificationFeedbackGenerator.prepare()
-        impactFeedbackGenerator.prepare()
+        configurePhotoImageView()
 
         if let meal = meal {
             navigationItem.title = meal.name
@@ -39,13 +33,19 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         updateSaveButtonState()
     }
 
+    private func configurePhotoImageView() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(selectImageFromPhotoLibrary(_:)))
+        photoImageView.isUserInteractionEnabled = true
+        photoImageView.addGestureRecognizer(gesture)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     @objc func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
-        impactFeedbackGenerator.impactOccurred()
+        feedback.occurred(scene: .willSelectPhoto)
         nameTextField.resignFirstResponder()
 
         let imagePickerController = UIImagePickerController()
@@ -68,7 +68,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         let rating = ratingControl.rating
 
         meal = Meal(name: name, photo: photo, rating: rating)
-        notificationFeedbackGenerator.notificationOccurred(.success)
+        feedback.occurred(scene: .itemSaved)
     }
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
