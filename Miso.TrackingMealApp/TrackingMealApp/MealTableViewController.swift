@@ -23,6 +23,10 @@ class MealTableViewController: UITableViewController {
             loadSampleMeals()
         }
         self.tableView.reloadData()
+
+        if self.traitCollection.forceTouchCapability == UIForceTouchCapability.available {
+            registerForPreviewing(with: self, sourceView: view)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -143,4 +147,34 @@ class MealTableViewController: UITableViewController {
     private func loadMeals() -> [Meal]? {
         return FileStorage.retrive(at: Meal.archiveUrl)
     }
+}
+
+extension MealTableViewController: UIViewControllerPreviewingDelegate {
+
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        let position = tableView.convert(location, from: view)
+        logger.debug(position)
+
+        guard let indexPath = tableView.indexPathForRow(at: location) else {
+            return nil
+        }
+        guard let cell = tableView.cellForRow(at: indexPath) as? MealTableViewCell else {
+            return nil
+        }
+        let meal = meals[indexPath.row]
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MealViewController") as! MealViewController
+        vc.meal = meal
+
+        vc.preferredContentSize = CGSize(width: 0.0, height: UIScreen.main.bounds.size.height)
+
+        previewingContext.sourceRect = view.convert(cell.frame, from: tableView)
+        return vc
+    }
+
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
+    }
+
 }
