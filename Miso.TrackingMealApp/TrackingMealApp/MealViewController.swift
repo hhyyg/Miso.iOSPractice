@@ -20,6 +20,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var ratingControl: RatingControl!
 
     public private(set) var meal: Meal?
+    private weak var delegate: MealViewControllerDelegate!
     private let feedbackGenerator = FeedbackGenerator()
 
     func set(delegate: MealViewControllerDelegate, meal: Meal) {
