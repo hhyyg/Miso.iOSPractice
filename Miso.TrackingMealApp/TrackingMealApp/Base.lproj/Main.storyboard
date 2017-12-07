@@ -93,9 +93,6 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7vk-uy-FFa" secondAttribute="height" multiplier="343:320" id="SOO-Sk-yzU"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="pGK-al-6j4" appends="YES" id="bxx-c4-xde"/>
-                                        </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sk4-t3-bsJ" customClass="RatingControl" customModule="TrackingMealApp">
                                         <rect key="frame" x="0.0" y="366" width="343" height="50"/>
@@ -135,11 +132,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="5lU-aO-Jc7" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="pGK-al-6j4">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="iXc-yu-i5U"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1039" y="131"/>
         </scene>
