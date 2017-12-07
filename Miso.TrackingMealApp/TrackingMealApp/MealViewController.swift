@@ -16,11 +16,12 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var ratingControl: RatingControl!
 
     var meal: Meal?
+    private let feedbackGenerator = FeedbackGenerator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
-        photoImageView.isUserInteractionEnabled = true
+        configurePhotoImageView()
 
         if let meal = meal {
             navigationItem.title = meal.name
@@ -32,12 +33,19 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         updateSaveButtonState()
     }
 
+    private func configurePhotoImageView() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(photoImageViewDidTap(_:)))
+        photoImageView.isUserInteractionEnabled = true
+        photoImageView.addGestureRecognizer(gesture)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+    @objc func photoImageViewDidTap(_ sender: UITapGestureRecognizer) {
+        feedbackGenerator.occurred(.willSelectPhoto)
         nameTextField.resignFirstResponder()
 
         let imagePickerController = UIImagePickerController()
@@ -60,6 +68,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         let rating = ratingControl.rating
 
         meal = Meal(name: name, photo: photo, rating: rating)
+        feedbackGenerator.occurred(.itemSaved)
     }
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
