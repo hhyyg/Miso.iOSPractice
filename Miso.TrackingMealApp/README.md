@@ -9,6 +9,8 @@
 - [#3 Add FeedbackGenerator](https://github.com/hhyyg/Miso.iOSPractice/pull/3)
 - [#4 Support Peek & Pop](https://github.com/hhyyg/Miso.iOSPractice/pull/4)
 
+![img_9615](https://user-images.githubusercontent.com/8636660/33699671-e6c43ba2-db57-11e7-882d-10c93dae437d.jpg)
+
 ## Thanks
 
 - [iOSアプリ作成チュートリアル纏め \- Qiita](https://qiita.com/tanaka512/items/d217fcdcdc94135d0def)
