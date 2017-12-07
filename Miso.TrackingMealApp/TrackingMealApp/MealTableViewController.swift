@@ -11,26 +11,16 @@ import os.log
 
 class MealTableViewController: UITableViewController {
 
-    var meals = [Meal]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.leftBarButtonItem = editButtonItem
-        if let savedMeals = loadMeals() {
-            meals += savedMeals
-        } else {
-            loadSampleMeals()
-        }
         self.tableView.reloadData()
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if self.traitCollection.forceTouchCapability == UIForceTouchCapability.available {
+            registerForPreviewing(with: self, sourceView: view)
+        }
     }
-
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -38,25 +28,7 @@ class MealTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return meals.count
-    }
-
-    private func loadSampleMeals() {
-        let photo1 = UIImage(named: "meal1")
-        let photo2 = UIImage(named: "meal2")
-        let photo3 = UIImage(named: "meal3")
-
-        guard let meal1 = Meal(name: "Caprese Salad", photo: photo1, rating: 4) else {
-            fatalError("Unable to instantiate meal1")
-        }
-        guard let meal2 = Meal(name: "Chicken and Potatoes", photo: photo2, rating: 5) else {
-            fatalError("Unable to instantiate meal2")
-        }
-        guard let meal3 = Meal(name: "Pasta with Meatballs", photo: photo3, rating: 3) else {
-            fatalError("Unable to instantiate meal2")
-        }
-
-        meals += [meal1, meal2, meal3]
+        return DataContainer.meals.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,7 +37,7 @@ class MealTableViewController: UITableViewController {
             fatalError()
         }
 
-        let meal = meals[indexPath.row]
+        let meal = DataContainer.meals[indexPath.row]
         cell.nameLabel.text = meal.name
         cell.photoImageView.image = meal.getPhotoImage()
         cell.ratingControl.rating = meal.rating
@@ -80,12 +52,12 @@ class MealTableViewController: UITableViewController {
 
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 //Update
-                meals[selectedIndexPath.row] = meal
+                DataContainer.meals[selectedIndexPath.row] = meal
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             } else {
                 //new
-                let newIndexPath = IndexPath(row: meals.count, section: 0)
-                meals.append(meal)
+                let newIndexPath = IndexPath(row: DataContainer.meals.count, section: 0)
+                DataContainer.meals.append(meal)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
 
@@ -93,7 +65,6 @@ class MealTableViewController: UITableViewController {
         }
     }
 
-    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
 
@@ -113,34 +84,72 @@ class MealTableViewController: UITableViewController {
                 fatalError()
             }
 
-            let selectedMeal = meals[indexPath.row]
-            mealDeatailViewController.meal = selectedMeal
+            let selectedMeal = DataContainer.meals[indexPath.row]
+            mealDeatailViewController.set(delegate: self, meal: selectedMeal)
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
     }
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            meals.remove(at: indexPath.row)
-            saveMeals()
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            deleteMeal(at: indexPath)
         }
     }
 
-    private func saveMeals() {
-        FileStorage.store(at: Meal.archiveUrl, value: meals)
-
-        print("url: \(Meal.archiveUrl)")
-        logger.debug("Meals successfully saved")
+    private func deleteMeal(at indexPath: IndexPath) {
+        DataContainer.meals.remove(at: indexPath.row)
+        saveMeals()
+        tableView.deleteRows(at: [indexPath], with: .fade)
     }
 
-    private func loadMeals() -> [Meal]? {
-        return FileStorage.retrive(at: Meal.archiveUrl)
+    private func saveMeals() {
+        DataContainer.save()
+    }
+}
+
+extension MealTableViewController: UIViewControllerPreviewingDelegate {
+
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        let position = tableView.convert(location, from: view)
+        logger.debug(position)
+
+        guard let indexPath = tableView.indexPathForRow(at: location) else {
+            return nil
+        }
+        guard let cell = tableView.cellForRow(at: indexPath) as? MealTableViewCell else {
+            return nil
+        }
+        let meal = DataContainer.meals[indexPath.row]
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MealViewController") as! MealViewController
+        vc.set(delegate: self, meal: meal)
+
+        vc.preferredContentSize = CGSize(width: 0.0, height: UIScreen.main.bounds.size.height)
+
+        previewingContext.sourceRect = view.convert(cell.frame, from: tableView)
+        return vc
+    }
+
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
+    }
+
+}
+
+extension MealTableViewController: MealViewControllerDelegate {
+
+    func mealViewController(_ viewController: MealViewController, mealDeleteDidTap meal: Meal) {
+        guard let i = (DataContainer.meals.index { $0.id == meal.id }) else {
+            assertionFailure("no found meal:\(meal.id) \(meal.name)")
+            return
+        }
+        let indexPath = IndexPath(row: i, section: 0)
+        deleteMeal(at: indexPath)
     }
 }

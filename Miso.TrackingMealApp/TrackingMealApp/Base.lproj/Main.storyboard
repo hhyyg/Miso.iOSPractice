@@ -15,7 +15,7 @@
         <!--Your Meals-->
         <scene sceneID="VKD-Du-ZRr">
             <objects>
-                <tableViewController id="cst-1W-bCe" customClass="MealTableViewController" customModule="TrackingMealApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MealTableViewController" id="cst-1W-bCe" customClass="MealTableViewController" customModule="TrackingMealApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HRb-wC-ThB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
         <!--New Meal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="TrackingMealApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MealViewController" id="BYZ-38-t0r" customClass="MealViewController" customModule="TrackingMealApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,6 +176,6 @@
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LgB-h8-Qxb"/>
+        <segue reference="re5-j5-95r"/>
     </inferredMetricsTieBreakers>
 </document>

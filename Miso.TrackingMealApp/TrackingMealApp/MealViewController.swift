@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MealViewControllerDelegate: class {
+    func mealViewController(_ viewController: MealViewController, mealDeleteDidTap meal: Meal)
+}
+
 class MealViewController: UIViewController, UINavigationControllerDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
@@ -15,8 +19,14 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var ratingControl: RatingControl!
 
-    var meal: Meal?
+    public private(set) var meal: Meal?
+    private weak var delegate: MealViewControllerDelegate!
     private let feedbackGenerator = FeedbackGenerator()
+
+    func set(delegate: MealViewControllerDelegate, meal: Meal) {
+        self.delegate = delegate
+        self.meal = meal
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +47,6 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(photoImageViewDidTap(_:)))
         photoImageView.isUserInteractionEnabled = true
         photoImageView.addGestureRecognizer(gesture)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @objc func photoImageViewDidTap(_ sender: UITapGestureRecognizer) {
@@ -81,6 +86,20 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
             logger.error("The MealViewController is not inside a navigation controller.")
         }
     }
+
+    override var previewActionItems: [UIPreviewActionItem] {
+
+        let deleteAction = UIPreviewAction(title: "Delete", style: .destructive) { (action, previewViewController ) in
+            guard let meal = self.meal else {
+                logger.error("no found meal for delete action. invalid operation.")
+                return
+            }
+
+            self.delegate.mealViewController(self, mealDeleteDidTap: meal)
+        }
+
+        return [deleteAction]
+    }
 }
 
 extension MealViewController: UITextFieldDelegate {
@@ -108,7 +127,6 @@ extension MealViewController: UITextFieldDelegate {
 
 extension MealViewController: UIImagePickerControllerDelegate {
 
-    //MARK UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
