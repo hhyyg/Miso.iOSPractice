@@ -1,8 +1,8 @@
 excluded:
-  - GistanTests/
+  - TrackingMealAppTests/
 disabled_rules:
   - identifier_name
   - line_length
 force_try:
   excluded:
-    - GistanTests/
+    - TrackingMealAppTests/

@@ -42,10 +42,6 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         updateSaveButtonState()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         nameTextField.resignFirstResponder()
 
