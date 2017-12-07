@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Feedback {
+class FeedbackGenerator {
     enum Scene {
         case
         itemSaved,
@@ -19,7 +19,7 @@ class Feedback {
     private let impact = UIImpactFeedbackGenerator(style: .medium)
     private let notification = UINotificationFeedbackGenerator()
 
-    func occur(scene: Feedback.Scene) {
+    func occurred(_ scene: FeedbackGenerator.Scene) {
         switch scene {
         case .itemSaved:
             notification.notificationOccurred(.success)

@@ -16,7 +16,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var ratingControl: RatingControl!
 
     var meal: Meal?
-    private let feedback = Feedback()
+    private let feedbackGenerator = FeedbackGenerator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     @objc func photoImageViewDidTap(_ sender: UITapGestureRecognizer) {
-        feedback.occur(scene: .willSelectPhoto)
+        feedbackGenerator.occurred(.willSelectPhoto)
         nameTextField.resignFirstResponder()
 
         let imagePickerController = UIImagePickerController()
@@ -68,7 +68,7 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
         let rating = ratingControl.rating
 
         meal = Meal(name: name, photo: photo, rating: rating)
-        feedback.occur(scene: .itemSaved)
+        feedbackGenerator.occurred(.itemSaved)
     }
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
