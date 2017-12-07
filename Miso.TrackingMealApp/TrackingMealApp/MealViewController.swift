@@ -85,7 +85,12 @@ class MealViewController: UIViewController, UINavigationControllerDelegate {
     override var previewActionItems: [UIPreviewActionItem] {
 
         let deleteAction = UIPreviewAction(title: "Delete", style: .destructive) { (action, previewViewController ) in
-            self.delegate!.mealViewController(self, mealDeleteDidTap: self.meal!)
+            guard let meal = self.meal else {
+                logger.error("no found meal for delete action. invalid operation.")
+                return
+            }
+
+            self.delegate.mealViewController(self, mealDeleteDidTap: meal)
         }
 
         return [deleteAction]

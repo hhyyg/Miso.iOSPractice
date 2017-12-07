@@ -97,7 +97,6 @@ class MealTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
 
@@ -151,7 +150,10 @@ extension MealTableViewController: UIViewControllerPreviewingDelegate {
 extension MealTableViewController: MealViewControllerDelegate {
 
     func mealViewController(_ viewController: MealViewController, mealDeleteDidTap meal: Meal) {
-        let i = DataContainer.meals.index { $0.id == meal.id }!
+        guard let i = (DataContainer.meals.index { $0.id == meal.id }) else {
+            logger.debug("no found meal:\(meal.id) \(meal.name)")
+            return
+        }
         let indexPath = IndexPath(row: i, section: 0)
         deleteMeal(at: indexPath)
     }
