@@ -24,18 +24,16 @@ struct DataContainer {
     static private func createSampleMeals() -> [Meal] {
 
         let elements = [
-            (name: "Caprese Salad", photoName: "meal1", rating: 4),
-            (name: "Chicken and Potatoes", photoName: "meal2", rating: 5),
-            (name: "Pasta with Meatballs", photoName: "meal3", rating: 3)
+            (name: "Caprese Salad", rating: 4),
+            (name: "Chicken and Potatoes", rating: 5),
+            (name: "Pasta with Meatballs", rating: 3)
         ]
 
-        let sampleMeals: [Meal] = elements.map { (name, photoName, rating) in
+        let sampleMeals: [Meal] = elements.enumerated().map { (i, element) in
 
-            let photo = UIImage(named: photoName)
-            guard let meal = Meal(name: name, photo: photo, rating: rating) else {
-                fatalError("Unable to instantiate:\(name)")
-            }
-            return meal
+            let (name, rating) = element
+            let photo = UIImage(named: "meal\(i + 1)")
+            return Meal(name: name, photo: photo, rating: rating)!
         }
 
         return sampleMeals

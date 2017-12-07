@@ -146,7 +146,7 @@ extension MealTableViewController: MealViewControllerDelegate {
 
     func mealViewController(_ viewController: MealViewController, mealDeleteDidTap meal: Meal) {
         guard let i = (DataContainer.meals.index { $0.id == meal.id }) else {
-            logger.debug("no found meal:\(meal.id) \(meal.name)")
+            assertionFailure("no found meal:\(meal.id) \(meal.name)")
             return
         }
         let indexPath = IndexPath(row: i, section: 0)
