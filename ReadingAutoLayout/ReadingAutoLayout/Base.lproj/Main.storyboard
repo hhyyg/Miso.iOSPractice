@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--カフェ検索条件-->
+        <!--Search Filter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReadingAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,9 +36,9 @@
                                     <constraint firstAttribute="height" constant="40" id="s9T-tu-fIo"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="検索"/>
+                                <state key="normal" title="Search"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500円以下" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLB-l6-Dp7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLB-l6-Dp7">
                                 <rect key="frame" x="56" y="99" width="244" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -60,7 +60,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="カフェ検索条件" id="dRP-0l-UF7">
+                    <navigationItem key="navigationItem" title="Search Filter" id="dRP-0l-UF7">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="2G7-zS-4j7">
                             <connections>
                                 <segue destination="TWz-5t-YaY" kind="show" id="Hv1-XU-tBW"/>
@@ -72,20 +72,67 @@
             </objects>
             <point key="canvasLocation" x="476" y="132.68365817091455"/>
         </scene>
-        <!--２つめ-->
+        <!--Quotation-->
         <scene sceneID="cgP-4z-1WA">
             <objects>
-                <viewController title="２つめ" id="TWz-5t-YaY" sceneMemberID="viewController">
+                <viewController title="Quotation" id="TWz-5t-YaY" customClass="QuotationViewController" customModule="ReadingAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CX8-YQ-EYS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" restorationIdentifier="MyLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4o-yP-0cH">
+                                <rect key="frame" x="16" y="80" width="343" height="21"/>
+                                <string key="text">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_pets" translatesAutoresizingMaskIntoConstraints="NO" id="MRf-bu-BPl">
+                                <rect key="frame" x="16" y="117" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1or-hg-BVp"/>
+                                    <constraint firstAttribute="height" constant="60" id="GwF-ey-u7o"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="吉田兼好" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw1-dy-6ql">
+                                <rect key="frame" x="84" y="156" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ty-Gb-w7S">
+                                <rect key="frame" x="16" y="185" width="343" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add rows"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="TWz-5t-YaY" eventType="touchUpInside" id="O8O-f4-c1w"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MRf-bu-BPl" firstAttribute="top" secondItem="w4o-yP-0cH" secondAttribute="bottom" constant="16" id="4Os-ai-n4A"/>
+                            <constraint firstItem="4ty-Gb-w7S" firstAttribute="top" secondItem="MRf-bu-BPl" secondAttribute="bottom" constant="8" id="8bO-iJ-D0Y"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iw1-dy-6ql" secondAttribute="trailing" constant="20" symbolic="YES" id="C6b-Pw-H5M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w4o-yP-0cH" secondAttribute="trailing" id="LsU-fy-Znq"/>
+                            <constraint firstItem="w4o-yP-0cH" firstAttribute="leading" secondItem="CX8-YQ-EYS" secondAttribute="leadingMargin" id="aVy-3r-QkT"/>
+                            <constraint firstItem="iw1-dy-6ql" firstAttribute="leading" secondItem="MRf-bu-BPl" secondAttribute="trailing" constant="8" id="cL8-Qh-yFn"/>
+                            <constraint firstItem="4ty-Gb-w7S" firstAttribute="leading" secondItem="CX8-YQ-EYS" secondAttribute="leadingMargin" id="cnc-sI-fDy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4ty-Gb-w7S" secondAttribute="trailing" id="cwx-zt-15A"/>
+                            <constraint firstItem="iw1-dy-6ql" firstAttribute="bottom" secondItem="MRf-bu-BPl" secondAttribute="bottom" id="hGi-2E-v3A"/>
+                            <constraint firstItem="w4o-yP-0cH" firstAttribute="top" secondItem="XMb-mF-OZa" secondAttribute="top" constant="16" id="sDa-FF-bn1"/>
+                            <constraint firstItem="MRf-bu-BPl" firstAttribute="leading" secondItem="CX8-YQ-EYS" secondAttribute="leadingMargin" id="ybS-7m-ERK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XMb-mF-OZa"/>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="w4o-yP-0cH" id="82A-Ww-geH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lF6-pY-xaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1209" y="133"/>
+            <point key="canvasLocation" x="1208.8" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tGI-xu-G0N">
