@@ -29,15 +29,17 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0M2-bt-5JU">
                                 <rect key="frame" x="310" y="94" width="51" height="31"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7Q-Na-paV">
-                                <rect key="frame" x="164" y="629" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7Q-Na-paV">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="s9T-tu-fIo"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="検索"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500円以下" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLB-l6-Dp7">
-                                <rect key="frame" x="56" y="99" width="83" height="21"/>
+                                <rect key="frame" x="56" y="99" width="244" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,13 +47,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x7Q-Na-paV" secondAttribute="bottom" id="0yv-PV-ihU"/>
                             <constraint firstItem="cLB-l6-Dp7" firstAttribute="centerY" secondItem="Z8N-GG-GAq" secondAttribute="centerY" id="40p-hq-bpu"/>
                             <constraint firstItem="Z8N-GG-GAq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AAk-KN-6pf"/>
                             <constraint firstItem="0M2-bt-5JU" firstAttribute="centerY" secondItem="Z8N-GG-GAq" secondAttribute="centerY" id="Htm-9C-cp2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0M2-bt-5JU" secondAttribute="trailing" id="M2b-f6-AQz"/>
                             <constraint firstItem="cLB-l6-Dp7" firstAttribute="leading" secondItem="Z8N-GG-GAq" secondAttribute="trailing" constant="10" id="b1H-xI-oS2"/>
                             <constraint firstItem="Z8N-GG-GAq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="bPa-ND-kpj"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cLB-l6-Dp7" secondAttribute="trailing" constant="20" symbolic="YES" id="ey0-Oa-E9y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x7Q-Na-paV" secondAttribute="trailing" id="cyg-Uo-EyW"/>
+                            <constraint firstItem="0M2-bt-5JU" firstAttribute="leading" secondItem="cLB-l6-Dp7" secondAttribute="trailing" constant="10" id="ey0-Oa-E9y"/>
+                            <constraint firstItem="x7Q-Na-paV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qX7-WR-W5g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
