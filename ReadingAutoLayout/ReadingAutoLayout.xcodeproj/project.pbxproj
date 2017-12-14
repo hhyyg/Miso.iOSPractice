@@ -14,6 +14,7 @@
 		EB143B711FE0E71000084D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB143B6F1FE0E71000084D90 /* LaunchScreen.storyboard */; };
 		EBA83A991FE0FEAE00B3A72C /* QuotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA83A981FE0FEAE00B3A72C /* QuotationViewController.swift */; };
 		EBA83A9B1FE212E800B3A72C /* Scroll1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA83A9A1FE212E800B3A72C /* Scroll1ViewController.swift */; };
+		EBA83A9D1FE21AF200B3A72C /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA83A9C1FE21AF200B3A72C /* KeyboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EB143B721FE0E71000084D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA83A981FE0FEAE00B3A72C /* QuotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationViewController.swift; sourceTree = "<group>"; };
 		EBA83A9A1FE212E800B3A72C /* Scroll1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroll1ViewController.swift; sourceTree = "<group>"; };
+		EBA83A9C1FE21AF200B3A72C /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				EB143B721FE0E71000084D90 /* Info.plist */,
 				EBA83A981FE0FEAE00B3A72C /* QuotationViewController.swift */,
 				EBA83A9A1FE212E800B3A72C /* Scroll1ViewController.swift */,
+				EBA83A9C1FE21AF200B3A72C /* KeyboardViewController.swift */,
 			);
 			path = ReadingAutoLayout;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB143B691FE0E71000084D90 /* ViewController.swift in Sources */,
+				EBA83A9D1FE21AF200B3A72C /* KeyboardViewController.swift in Sources */,
 				EBA83A9B1FE212E800B3A72C /* Scroll1ViewController.swift in Sources */,
 				EBA83A991FE0FEAE00B3A72C /* QuotationViewController.swift in Sources */,
 				EB143B671FE0E71000084D90 /* AppDelegate.swift in Sources */,
