@@ -29,6 +29,9 @@
 		EBB181E81FE36DA700366C0F /* RemindersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181E71FE36DA700366C0F /* RemindersRepository.swift */; };
 		EBB181EB1FE36DF200366C0F /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181EA1FE36DF200366C0F /* Reminder.swift */; };
 		EBB181EF1FE36EAA00366C0F /* InMemoryRemindersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181EE1FE36EAA00366C0F /* InMemoryRemindersRepository.swift */; };
+		EBB181F21FE36F6F00366C0F /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181F11FE36F6F00366C0F /* RemindersViewController.swift */; };
+		EBB181F41FE3736F00366C0F /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181F31FE3736F00366C0F /* RemindersView.swift */; };
+		EBB181F61FE3739D00366C0F /* RemindersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181F51FE3739D00366C0F /* RemindersPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		EBB181E71FE36DA700366C0F /* RemindersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersRepository.swift; sourceTree = "<group>"; };
 		EBB181EA1FE36DF200366C0F /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		EBB181EE1FE36EAA00366C0F /* InMemoryRemindersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRemindersRepository.swift; sourceTree = "<group>"; };
+		EBB181F11FE36F6F00366C0F /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		EBB181F31FE3736F00366C0F /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
+		EBB181F51FE3739D00366C0F /* RemindersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,7 @@
 				EBB181E31FE369A400366C0F /* ControllerFactory.swift */,
 				EBB181A91FE3611A00366C0F /* Router */,
 				EBB181EC1FE36E6A00366C0F /* Repositories */,
+				EBB181F01FE36F5700366C0F /* Reminders */,
 				EBB181821FE35FFC00366C0F /* Assets.xcassets */,
 				EBB181841FE35FFC00366C0F /* LaunchScreen.storyboard */,
 				EBB181871FE35FFC00366C0F /* Info.plist */,
@@ -275,6 +282,8 @@
 		EBB181E91FE36DCE00366C0F /* Reminders */ = {
 			isa = PBXGroup;
 			children = (
+				EBB181F31FE3736F00366C0F /* RemindersView.swift */,
+				EBB181F51FE3739D00366C0F /* RemindersPresenter.swift */,
 			);
 			path = Reminders;
 			sourceTree = "<group>";
@@ -285,6 +294,14 @@
 				EBB181EE1FE36EAA00366C0F /* InMemoryRemindersRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EBB181F01FE36F5700366C0F /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				EBB181F11FE36F6F00366C0F /* RemindersViewController.swift */,
+			);
+			path = Reminders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,6 +537,7 @@
 				EBB181DB1FE3664A00366C0F /* UIWindow.swift in Sources */,
 				EBB181AB1FE3613000366C0F /* AppRouter.swift in Sources */,
 				EBB181D91FE3660900366C0F /* Window.swift in Sources */,
+				EBB181F21FE36F6F00366C0F /* RemindersViewController.swift in Sources */,
 				EBB181E01FE367DA00366C0F /* UIViewController+ViewController.swift in Sources */,
 				EBB181E41FE369A400366C0F /* ControllerFactory.swift in Sources */,
 				EBB181EF1FE36EAA00366C0F /* InMemoryRemindersRepository.swift in Sources */,
@@ -548,7 +566,9 @@
 			files = (
 				EBB181D31FE3641400366C0F /* View.swift in Sources */,
 				EBB181E81FE36DA700366C0F /* RemindersRepository.swift in Sources */,
+				EBB181F41FE3736F00366C0F /* RemindersView.swift in Sources */,
 				EBB181D11FE363E800366C0F /* Router.swift in Sources */,
+				EBB181F61FE3739D00366C0F /* RemindersPresenter.swift in Sources */,
 				EBB181EB1FE36DF200366C0F /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@ import CRemindersCore
 
 class InMemoryRemindersRepository: RemindersRepository {
 
-    private static var reminders = [Reminder]()
+    private static var reminders = [ Reminder(title: "first item") ]
 
     func save(_ reminder: Reminder) {
         InMemoryRemindersRepository.reminders.append(reminder)

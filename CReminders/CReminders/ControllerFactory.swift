@@ -11,8 +11,10 @@ import UIKit
 
 class ControllerFactory {
 
-    init() {
+    let repository: RemindersRepository
 
+    init(repository: RemindersRepository = InMemoryRemindersRepository()) {
+        self.repository = repository
     }
 
     func build(from view: View, router: Router) -> ViewController {
@@ -22,8 +24,11 @@ class ControllerFactory {
             fatalError()
         case .reminders:
 
-            let controller = UIViewController()
-
+            let controller = RemindersViewController()
+            let presenter = RemindersPresenter(view: controller,
+                                               router: router,
+                                               repository: repository)
+            controller.setPresenter(presenter)
             return UINavigationController(rootViewController: controller)
         }
     }
