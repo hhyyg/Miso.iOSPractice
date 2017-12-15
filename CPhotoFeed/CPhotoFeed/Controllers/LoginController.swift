@@ -10,9 +10,14 @@ import UIKit
 import WebKit
 import Anchors
 
+protocol LoginControllerDelegate: class {
+    func loginControllerDidFinish(_ controller: LoginController)
+}
+
 class LoginController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
+    weak var delegate: LoginControllerDelegate?
     private let webView = WKWebView()
 
     override func viewDidLoad() {
@@ -21,6 +26,7 @@ class LoginController: UIViewController {
         //WebView
         view.addSubview(webView)
         webView.alpha = 0
+        webView.navigationDelegate = self
         activate(webView.anchor.edges)
     }
 
@@ -32,4 +38,22 @@ class LoginController: UIViewController {
         })
     }
 
+}
+
+extension LoginController: WKNavigationDelegate {
+
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+
+        if let url = navigationAction.request.url,
+            url.absoluteString.contains("#access_token") {
+
+            let parts = url.absoluteString.split(separator: "#").last!
+            let value = parts.split(separator: "=").last!
+
+            print("accesstoken: \(value)")
+            APIClient.shared.accessToken = String(value)
+            delegate?.loginControllerDidFinish(self)
+        }
+        decisionHandler(.allow)
+    }
 }

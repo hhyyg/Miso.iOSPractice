@@ -36,8 +36,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func showLogin() {
-        loginController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as? LoginController
-        //TODO
-        window?.rootViewController = loginController!
+        guard let loginController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as? LoginController else {
+            fatalError()
+        }
+        loginController.delegate = self
+        window?.rootViewController = loginController
+    }
+}
+
+extension AppDelegate: LoginControllerDelegate {
+    func loginControllerDidFinish(_ controller: LoginController) {
+        print("ya")
     }
 }
