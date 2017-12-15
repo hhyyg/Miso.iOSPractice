@@ -1,0 +1,1 @@
+This project is copy of [onmyway133/PhotoFeed: 🛵 Instagram in Swift 4](https://github.com/onmyway133/PhotoFeed) for my practice programming.
