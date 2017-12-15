@@ -7,28 +7,29 @@
 //
 
 import UIKit
+import WebKit
+import Anchors
 
 class LoginController: UIViewController {
+
+    @IBOutlet weak var loginButton: UIButton!
+    private let webView = WKWebView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //WebView
+        view.addSubview(webView)
+        webView.alpha = 0
+        activate(webView.anchor.edges)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func loginButtonTouched(_ sender: UIButton) {
+        let request = URLRequest(url: APIClient.shared.loginUrl)
+        webView.load(request)
+        UIView.animate(withDuration: 0.25, animations: {
+            self.webView.alpha = 1
+        })
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

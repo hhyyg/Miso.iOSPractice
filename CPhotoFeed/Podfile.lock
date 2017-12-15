@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (4.6.0)
+  - Anchors (2.2.1)
+  - Compass (6.0.0)
+  - Kingfisher (4.5.0)
+  - Pastel (0.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Anchors (from `https://github.com/onmyway133/Anchors`)
+  - Compass
+  - Kingfisher
+  - Pastel
+
+EXTERNAL SOURCES:
+  Anchors:
+    :git: https://github.com/onmyway133/Anchors
+
+CHECKOUT OPTIONS:
+  Anchors:
+    :commit: 958fd6da769ffc9d20bb5c745f7752f150919292
+    :git: https://github.com/onmyway133/Anchors
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Anchors: e9acf337a5b7d49170f9ff533227575ddc906e14
+  Compass: ff30e2056c549ea5cb5b8a307d28ef628e4209ff
+  Kingfisher: 26ae0473102b77b575da51960c932431e3745407
+  Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
+
+PODFILE CHECKSUM: c00e693a20d4e625da7b56c81f1aa8bc4c475d8d
+
+COCOAPODS: 1.4.0.beta.2

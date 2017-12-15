@@ -19,11 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.tintColor = .black
 
+        try! loadSettings()
         showLogin()
 
         window?.makeKeyAndVisible()
 
         return true
+    }
+
+    func loadSettings() throws {
+        //load settings.plist
+        let settingURL: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "settings", ofType: "plist")!)
+        let data = try Data(contentsOf: settingURL)
+        let decoder = PropertyListDecoder()
+        SettingsContainer.settings = try decoder.decode(Settings.self, from: data)
     }
 
     func showLogin() {
