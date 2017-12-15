@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EBB1817C1FE35FFC00366C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1817B1FE35FFC00366C0F /* AppDelegate.swift */; };
-		EBB1817E1FE35FFC00366C0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1817D1FE35FFC00366C0F /* ViewController.swift */; };
-		EBB181811FE35FFC00366C0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB1817F1FE35FFC00366C0F /* Main.storyboard */; };
 		EBB181831FE35FFC00366C0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB181821FE35FFC00366C0F /* Assets.xcassets */; };
 		EBB181861FE35FFC00366C0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB181841FE35FFC00366C0F /* LaunchScreen.storyboard */; };
 		EBB181911FE35FFC00366C0F /* CRemindersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181901FE35FFC00366C0F /* CRemindersTests.swift */; };
 		EBB1819C1FE35FFC00366C0F /* CRemindersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1819B1FE35FFC00366C0F /* CRemindersUITests.swift */; };
+		EBB181AB1FE3613000366C0F /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181AA1FE3613000366C0F /* AppRouter.swift */; };
+		EBB181BA1FE3639B00366C0F /* CRemindersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB181B11FE3639B00366C0F /* CRemindersCore.framework */; };
+		EBB181C11FE3639B00366C0F /* CRemindersCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181C01FE3639B00366C0F /* CRemindersCoreTests.swift */; };
+		EBB181C31FE3639B00366C0F /* CRemindersCore.h in Headers */ = {isa = PBXBuildFile; fileRef = EBB181B31FE3639B00366C0F /* CRemindersCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBB181C61FE3639B00366C0F /* CRemindersCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB181B11FE3639B00366C0F /* CRemindersCore.framework */; };
+		EBB181C71FE3639B00366C0F /* CRemindersCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBB181B11FE3639B00366C0F /* CRemindersCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EBB181D11FE363E800366C0F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181D01FE363E800366C0F /* Router.swift */; };
+		EBB181D31FE3641400366C0F /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181D21FE3641400366C0F /* View.swift */; };
+		EBB181D51FE3651300366C0F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EBB181D41FE3651300366C0F /* .swiftlint.yml */; };
+		EBB181D91FE3660900366C0F /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181D81FE3660900366C0F /* Window.swift */; };
+		EBB181DB1FE3664A00366C0F /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181DA1FE3664A00366C0F /* UIWindow.swift */; };
+		EBB181DE1FE3671A00366C0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181DD1FE3671A00366C0F /* ViewController.swift */; };
+		EBB181E01FE367DA00366C0F /* UIViewController+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181DF1FE367DA00366C0F /* UIViewController+ViewController.swift */; };
+		EBB181E41FE369A400366C0F /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181E31FE369A400366C0F /* ControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +43,46 @@
 			remoteGlobalIDString = EBB181771FE35FFC00366C0F;
 			remoteInfo = CReminders;
 		};
+		EBB181BB1FE3639B00366C0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB181701FE35FFC00366C0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB181B01FE3639B00366C0F;
+			remoteInfo = CRemindersCore;
+		};
+		EBB181BD1FE3639B00366C0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB181701FE35FFC00366C0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB181771FE35FFC00366C0F;
+			remoteInfo = CReminders;
+		};
+		EBB181C41FE3639B00366C0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB181701FE35FFC00366C0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB181B01FE3639B00366C0F;
+			remoteInfo = CRemindersCore;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBB181CB1FE3639B00366C0F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EBB181C71FE3639B00366C0F /* CRemindersCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EBB181781FE35FFC00366C0F /* CReminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CReminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1817B1FE35FFC00366C0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBB1817D1FE35FFC00366C0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EBB181801FE35FFC00366C0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBB181821FE35FFC00366C0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB181851FE35FFC00366C0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBB181871FE35FFC00366C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +92,21 @@
 		EBB181971FE35FFC00366C0F /* CRemindersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CRemindersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1819B1FE35FFC00366C0F /* CRemindersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRemindersUITests.swift; sourceTree = "<group>"; };
 		EBB1819D1FE35FFC00366C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB181AA1FE3613000366C0F /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		EBB181B11FE3639B00366C0F /* CRemindersCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CRemindersCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB181B31FE3639B00366C0F /* CRemindersCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRemindersCore.h; sourceTree = "<group>"; };
+		EBB181B41FE3639B00366C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB181B91FE3639B00366C0F /* CRemindersCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CRemindersCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB181C01FE3639B00366C0F /* CRemindersCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRemindersCoreTests.swift; sourceTree = "<group>"; };
+		EBB181C21FE3639B00366C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB181D01FE363E800366C0F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EBB181D21FE3641400366C0F /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		EBB181D41FE3651300366C0F /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		EBB181D81FE3660900366C0F /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		EBB181DA1FE3664A00366C0F /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
+		EBB181DD1FE3671A00366C0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBB181DF1FE367DA00366C0F /* UIViewController+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ViewController.swift"; sourceTree = "<group>"; };
+		EBB181E31FE369A400366C0F /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB181C61FE3639B00366C0F /* CRemindersCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,15 +132,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB181AD1FE3639B00366C0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB181B61FE3639B00366C0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB181BA1FE3639B00366C0F /* CRemindersCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		EBB1816F1FE35FFC00366C0F = {
 			isa = PBXGroup;
 			children = (
+				EBB181D41FE3651300366C0F /* .swiftlint.yml */,
 				EBB1817A1FE35FFC00366C0F /* CReminders */,
 				EBB1818F1FE35FFC00366C0F /* CRemindersTests */,
 				EBB1819A1FE35FFC00366C0F /* CRemindersUITests */,
+				EBB181B21FE3639B00366C0F /* CRemindersCore */,
+				EBB181BF1FE3639B00366C0F /* CRemindersCoreTests */,
 				EBB181791FE35FFC00366C0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +169,8 @@
 				EBB181781FE35FFC00366C0F /* CReminders.app */,
 				EBB1818C1FE35FFC00366C0F /* CRemindersTests.xctest */,
 				EBB181971FE35FFC00366C0F /* CRemindersUITests.xctest */,
+				EBB181B11FE3639B00366C0F /* CRemindersCore.framework */,
+				EBB181B91FE3639B00366C0F /* CRemindersCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,8 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				EBB1817B1FE35FFC00366C0F /* AppDelegate.swift */,
-				EBB1817D1FE35FFC00366C0F /* ViewController.swift */,
-				EBB1817F1FE35FFC00366C0F /* Main.storyboard */,
+				EBB181E31FE369A400366C0F /* ControllerFactory.swift */,
+				EBB181A91FE3611A00366C0F /* Router */,
 				EBB181821FE35FFC00366C0F /* Assets.xcassets */,
 				EBB181841FE35FFC00366C0F /* LaunchScreen.storyboard */,
 				EBB181871FE35FFC00366C0F /* Info.plist */,
@@ -125,7 +206,66 @@
 			path = CRemindersUITests;
 			sourceTree = "<group>";
 		};
+		EBB181A91FE3611A00366C0F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EBB181AA1FE3613000366C0F /* AppRouter.swift */,
+				EBB181DC1FE3670600366C0F /* ViewController */,
+				EBB181D71FE3659B00366C0F /* Window */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EBB181B21FE3639B00366C0F /* CRemindersCore */ = {
+			isa = PBXGroup;
+			children = (
+				EBB181B31FE3639B00366C0F /* CRemindersCore.h */,
+				EBB181B41FE3639B00366C0F /* Info.plist */,
+				EBB181D01FE363E800366C0F /* Router.swift */,
+				EBB181D21FE3641400366C0F /* View.swift */,
+			);
+			path = CRemindersCore;
+			sourceTree = "<group>";
+		};
+		EBB181BF1FE3639B00366C0F /* CRemindersCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBB181C01FE3639B00366C0F /* CRemindersCoreTests.swift */,
+				EBB181C21FE3639B00366C0F /* Info.plist */,
+			);
+			path = CRemindersCoreTests;
+			sourceTree = "<group>";
+		};
+		EBB181D71FE3659B00366C0F /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				EBB181D81FE3660900366C0F /* Window.swift */,
+				EBB181DA1FE3664A00366C0F /* UIWindow.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		EBB181DC1FE3670600366C0F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EBB181DD1FE3671A00366C0F /* ViewController.swift */,
+				EBB181DF1FE367DA00366C0F /* UIViewController+ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EBB181AE1FE3639B00366C0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB181C31FE3639B00366C0F /* CRemindersCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		EBB181771FE35FFC00366C0F /* CReminders */ = {
@@ -135,10 +275,13 @@
 				EBB181741FE35FFC00366C0F /* Sources */,
 				EBB181751FE35FFC00366C0F /* Frameworks */,
 				EBB181761FE35FFC00366C0F /* Resources */,
+				EBB181CB1FE3639B00366C0F /* Embed Frameworks */,
+				EBB181E11FE368C100366C0F /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBB181C51FE3639B00366C0F /* PBXTargetDependency */,
 			);
 			name = CReminders;
 			productName = CReminders;
@@ -181,6 +324,43 @@
 			productReference = EBB181971FE35FFC00366C0F /* CRemindersUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EBB181B01FE3639B00366C0F /* CRemindersCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB181C81FE3639B00366C0F /* Build configuration list for PBXNativeTarget "CRemindersCore" */;
+			buildPhases = (
+				EBB181AC1FE3639B00366C0F /* Sources */,
+				EBB181AD1FE3639B00366C0F /* Frameworks */,
+				EBB181AE1FE3639B00366C0F /* Headers */,
+				EBB181AF1FE3639B00366C0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CRemindersCore;
+			productName = CRemindersCore;
+			productReference = EBB181B11FE3639B00366C0F /* CRemindersCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EBB181B81FE3639B00366C0F /* CRemindersCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB181CC1FE3639B00366C0F /* Build configuration list for PBXNativeTarget "CRemindersCoreTests" */;
+			buildPhases = (
+				EBB181B51FE3639B00366C0F /* Sources */,
+				EBB181B61FE3639B00366C0F /* Frameworks */,
+				EBB181B71FE3639B00366C0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBB181BC1FE3639B00366C0F /* PBXTargetDependency */,
+				EBB181BE1FE3639B00366C0F /* PBXTargetDependency */,
+			);
+			name = CRemindersCoreTests;
+			productName = CRemindersCoreTests;
+			productReference = EBB181B91FE3639B00366C0F /* CRemindersCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +385,16 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = EBB181771FE35FFC00366C0F;
 					};
+					EBB181B01FE3639B00366C0F = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					EBB181B81FE3639B00366C0F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EBB181771FE35FFC00366C0F;
+					};
 				};
 			};
 			buildConfigurationList = EBB181731FE35FFC00366C0F /* Build configuration list for PBXProject "CReminders" */;
@@ -223,6 +413,8 @@
 				EBB181771FE35FFC00366C0F /* CReminders */,
 				EBB1818B1FE35FFC00366C0F /* CRemindersTests */,
 				EBB181961FE35FFC00366C0F /* CRemindersUITests */,
+				EBB181B01FE3639B00366C0F /* CRemindersCore */,
+				EBB181B81FE3639B00366C0F /* CRemindersCoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,7 +426,6 @@
 			files = (
 				EBB181861FE35FFC00366C0F /* LaunchScreen.storyboard in Resources */,
 				EBB181831FE35FFC00366C0F /* Assets.xcassets in Resources */,
-				EBB181811FE35FFC00366C0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,15 +443,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB181AF1FE3639B00366C0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB181D51FE3651300366C0F /* .swiftlint.yml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB181B71FE3639B00366C0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EBB181E11FE368C100366C0F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EBB181741FE35FFC00366C0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB1817E1FE35FFC00366C0F /* ViewController.swift in Sources */,
+				EBB181DE1FE3671A00366C0F /* ViewController.swift in Sources */,
 				EBB1817C1FE35FFC00366C0F /* AppDelegate.swift in Sources */,
+				EBB181DB1FE3664A00366C0F /* UIWindow.swift in Sources */,
+				EBB181AB1FE3613000366C0F /* AppRouter.swift in Sources */,
+				EBB181D91FE3660900366C0F /* Window.swift in Sources */,
+				EBB181E01FE367DA00366C0F /* UIViewController+ViewController.swift in Sources */,
+				EBB181E41FE369A400366C0F /* ControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +508,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB181AC1FE3639B00366C0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB181D31FE3641400366C0F /* View.swift in Sources */,
+				EBB181D11FE363E800366C0F /* Router.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB181B51FE3639B00366C0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB181C11FE3639B00366C0F /* CRemindersCoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,17 +538,24 @@
 			target = EBB181771FE35FFC00366C0F /* CReminders */;
 			targetProxy = EBB181981FE35FFC00366C0F /* PBXContainerItemProxy */;
 		};
+		EBB181BC1FE3639B00366C0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB181B01FE3639B00366C0F /* CRemindersCore */;
+			targetProxy = EBB181BB1FE3639B00366C0F /* PBXContainerItemProxy */;
+		};
+		EBB181BE1FE3639B00366C0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB181771FE35FFC00366C0F /* CReminders */;
+			targetProxy = EBB181BD1FE3639B00366C0F /* PBXContainerItemProxy */;
+		};
+		EBB181C51FE3639B00366C0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB181B01FE3639B00366C0F /* CRemindersCore */;
+			targetProxy = EBB181C41FE3639B00366C0F /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EBB1817F1FE35FFC00366C0F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBB181801FE35FFC00366C0F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EBB181841FE35FFC00366C0F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -425,6 +677,7 @@
 		EBB181A11FE35FFC00366C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
@@ -440,6 +693,7 @@
 		EBB181A21FE35FFC00366C0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
@@ -514,6 +768,89 @@
 			};
 			name = Release;
 		};
+		EBB181C91FE3639B00366C0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CRemindersCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.CRemindersCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EBB181CA1FE3639B00366C0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CRemindersCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.CRemindersCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EBB181CD1FE3639B00366C0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				INFOPLIST_FILE = CRemindersCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.CRemindersCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CReminders.app/CReminders";
+			};
+			name = Debug;
+		};
+		EBB181CE1FE3639B00366C0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				INFOPLIST_FILE = CRemindersCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.CRemindersCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CReminders.app/CReminders";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,6 +886,24 @@
 			buildConfigurations = (
 				EBB181A71FE35FFC00366C0F /* Debug */,
 				EBB181A81FE35FFC00366C0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBB181C81FE3639B00366C0F /* Build configuration list for PBXNativeTarget "CRemindersCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB181C91FE3639B00366C0F /* Debug */,
+				EBB181CA1FE3639B00366C0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBB181CC1FE3639B00366C0F /* Build configuration list for PBXNativeTarget "CRemindersCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB181CD1FE3639B00366C0F /* Debug */,
+				EBB181CE1FE3639B00366C0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

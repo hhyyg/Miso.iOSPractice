@@ -1,15 +1,15 @@
 //
-//  CRemindersTests.swift
-//  CRemindersTests
+//  CRemindersCoreTests.swift
+//  CRemindersCoreTests
 //
 //  Created by Hiroka Yago on 2017/12/15.
 //  Copyright © 2017 Hiroka Yago. All rights reserved.
 //
 
 import XCTest
-@testable import CReminders
+@testable import CRemindersCore
 
-class CRemindersTests: XCTestCase {
+class CRemindersCoreTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
