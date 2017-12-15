@@ -24,7 +24,11 @@ class AppRouter: Router {
     func route(to view: View) {
         switch view {
         case .addReminder:
-            fatalError()
+
+            let controllerToPresent = controllerFactory.build(from: view, router: self)
+            controller?.present(controllerToPresent)
+            controller = controllerToPresent
+
         case .reminders:
 
             if window.rootView != nil {

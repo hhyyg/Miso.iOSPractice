@@ -9,6 +9,7 @@
 import CRemindersCore
 import UIKit
 
+//+navigation
 class ControllerFactory {
 
     let repository: RemindersRepository
@@ -21,7 +22,13 @@ class ControllerFactory {
 
         switch view {
         case .addReminder:
-            fatalError()
+
+            let controller = AddReminderViewController()
+            let presenter = AddReminderPresenter(view: controller, router: router, repository: repository)
+
+            controller.setPresenter(presenter)
+            return UINavigationController(rootViewController: controller)
+
         case .reminders:
 
             let controller = RemindersViewController()

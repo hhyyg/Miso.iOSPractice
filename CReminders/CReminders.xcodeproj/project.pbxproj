@@ -32,6 +32,9 @@
 		EBB181F21FE36F6F00366C0F /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181F11FE36F6F00366C0F /* RemindersViewController.swift */; };
 		EBB181F41FE3736F00366C0F /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181F31FE3736F00366C0F /* RemindersView.swift */; };
 		EBB181F61FE3739D00366C0F /* RemindersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181F51FE3739D00366C0F /* RemindersPresenter.swift */; };
+		EBB181FB1FE38C0D00366C0F /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181FA1FE38C0D00366C0F /* AddReminderView.swift */; };
+		EBB181FD1FE38C2E00366C0F /* AddReminderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181FC1FE38C2E00366C0F /* AddReminderPresenter.swift */; };
+		EBB181FF1FE38CE100366C0F /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB181FE1FE38CE100366C0F /* AddReminderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,9 @@
 		EBB181F11FE36F6F00366C0F /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
 		EBB181F31FE3736F00366C0F /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		EBB181F51FE3739D00366C0F /* RemindersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersPresenter.swift; sourceTree = "<group>"; };
+		EBB181FA1FE38C0D00366C0F /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
+		EBB181FC1FE38C2E00366C0F /* AddReminderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderPresenter.swift; sourceTree = "<group>"; };
+		EBB181FE1FE38CE100366C0F /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +201,7 @@
 				EBB181A91FE3611A00366C0F /* Router */,
 				EBB181EC1FE36E6A00366C0F /* Repositories */,
 				EBB181F01FE36F5700366C0F /* Reminders */,
+				EBB181F71FE38B9500366C0F /* Add Reminder */,
 				EBB181821FE35FFC00366C0F /* Assets.xcassets */,
 				EBB181841FE35FFC00366C0F /* LaunchScreen.storyboard */,
 				EBB181871FE35FFC00366C0F /* Info.plist */,
@@ -238,6 +245,7 @@
 				EBB181EA1FE36DF200366C0F /* Reminder.swift */,
 				EBB181D21FE3641400366C0F /* View.swift */,
 				EBB181E91FE36DCE00366C0F /* Reminders */,
+				EBB181F81FE38BC200366C0F /* Add Reminder */,
 				EBB181E61FE36D8500366C0F /* Repositories */,
 				EBB181B41FE3639B00366C0F /* Info.plist */,
 			);
@@ -302,6 +310,23 @@
 				EBB181F11FE36F6F00366C0F /* RemindersViewController.swift */,
 			);
 			path = Reminders;
+			sourceTree = "<group>";
+		};
+		EBB181F71FE38B9500366C0F /* Add Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				EBB181FE1FE38CE100366C0F /* AddReminderViewController.swift */,
+			);
+			path = "Add Reminder";
+			sourceTree = "<group>";
+		};
+		EBB181F81FE38BC200366C0F /* Add Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				EBB181FA1FE38C0D00366C0F /* AddReminderView.swift */,
+				EBB181FC1FE38C2E00366C0F /* AddReminderPresenter.swift */,
+			);
+			path = "Add Reminder";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +561,7 @@
 				EBB1817C1FE35FFC00366C0F /* AppDelegate.swift in Sources */,
 				EBB181DB1FE3664A00366C0F /* UIWindow.swift in Sources */,
 				EBB181AB1FE3613000366C0F /* AppRouter.swift in Sources */,
+				EBB181FF1FE38CE100366C0F /* AddReminderViewController.swift in Sources */,
 				EBB181D91FE3660900366C0F /* Window.swift in Sources */,
 				EBB181F21FE36F6F00366C0F /* RemindersViewController.swift in Sources */,
 				EBB181E01FE367DA00366C0F /* UIViewController+ViewController.swift in Sources */,
@@ -565,8 +591,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB181D31FE3641400366C0F /* View.swift in Sources */,
+				EBB181FB1FE38C0D00366C0F /* AddReminderView.swift in Sources */,
 				EBB181E81FE36DA700366C0F /* RemindersRepository.swift in Sources */,
 				EBB181F41FE3736F00366C0F /* RemindersView.swift in Sources */,
+				EBB181FD1FE38C2E00366C0F /* AddReminderPresenter.swift in Sources */,
 				EBB181D11FE363E800366C0F /* Router.swift in Sources */,
 				EBB181F61FE3739D00366C0F /* RemindersPresenter.swift in Sources */,
 				EBB181EB1FE36DF200366C0F /* Reminder.swift in Sources */,

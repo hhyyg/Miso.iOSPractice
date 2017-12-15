@@ -40,7 +40,7 @@ class RemindersViewController: UIViewController {
     }
 
     @objc private func addReminder() {
-        print("Add")
+        presenter.addNewReminder()
     }
 }
 
