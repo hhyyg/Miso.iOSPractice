@@ -22,6 +22,10 @@
 		EBB182471FE3B48000366C0F /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBB182461FE3B48000366C0F /* settings.plist */; };
 		EBB182491FE3B4B800366C0F /* settings.template.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBB182481FE3B4B800366C0F /* settings.template.plist */; };
 		EBB1824B1FE3B51100366C0F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1824A1FE3B51100366C0F /* Settings.swift */; };
+		EBB1824D1FE4D98500366C0F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1824C1FE4D98500366C0F /* MainController.swift */; };
+		EBB1824F1FE4DB4C00366C0F /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1824E1FE4DB4C00366C0F /* FeedController.swift */; };
+		EBB182511FE4DB5C00366C0F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182501FE4DB5C00366C0F /* ProfileController.swift */; };
+		EBB182531FE4DB6F00366C0F /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182521FE4DB6F00366C0F /* MenuController.swift */; };
 		EBBC1A7C8745AC667CFC3453 /* Pods_CPhotoFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A70439B28DCC98C0203E05 /* Pods_CPhotoFeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,10 @@
 		EBB182461FE3B48000366C0F /* settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
 		EBB182481FE3B4B800366C0F /* settings.template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settings.template.plist; sourceTree = "<group>"; };
 		EBB1824A1FE3B51100366C0F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		EBB1824C1FE4D98500366C0F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		EBB1824E1FE4DB4C00366C0F /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		EBB182501FE4DB5C00366C0F /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		EBB182521FE4DB6F00366C0F /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		EEFCDF2F3D322296901351E8 /* Pods-CPhotoFeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPhotoFeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CPhotoFeedTests/Pods-CPhotoFeedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F31375677ED1F1AAEA04C998 /* Pods-CPhotoFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPhotoFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-CPhotoFeed/Pods-CPhotoFeed.release.xcconfig"; sourceTree = "<group>"; };
 		FC58D4C46EB22ECED3EDC3FB /* Pods_CPhotoFeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CPhotoFeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				EBB1823B1FE3A84500366C0F /* LoginController.swift */,
+				EBB1824C1FE4D98500366C0F /* MainController.swift */,
+				EBB1824E1FE4DB4C00366C0F /* FeedController.swift */,
+				EBB182501FE4DB5C00366C0F /* ProfileController.swift */,
+				EBB182521FE4DB6F00366C0F /* MenuController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -527,10 +539,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB182531FE4DB6F00366C0F /* MenuController.swift in Sources */,
+				EBB182511FE4DB5C00366C0F /* ProfileController.swift in Sources */,
 				EBB1823C1FE3A84500366C0F /* LoginController.swift in Sources */,
+				EBB1824F1FE4DB4C00366C0F /* FeedController.swift in Sources */,
 				EBB1824B1FE3B51100366C0F /* Settings.swift in Sources */,
 				EBB1820D1FE3A72D00366C0F /* AppDelegate.swift in Sources */,
 				EBB182441FE3B28A00366C0F /* APIClient.swift in Sources */,
+				EBB1824D1FE4D98500366C0F /* MainController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

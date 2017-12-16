@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     private var loginController: LoginController?
+    private var mainController: MainController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -42,10 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginController.delegate = self
         window?.rootViewController = loginController
     }
+
+    func showMain() {
+        guard let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainController") as? MainController else {
+            fatalError()
+        }
+
+        window?.rootViewController = mainController
+        loginController = nil
+
+    }
 }
 
 extension AppDelegate: LoginControllerDelegate {
     func loginControllerDidFinish(_ controller: LoginController) {
-        print("ya")
+        showMain()
     }
 }
