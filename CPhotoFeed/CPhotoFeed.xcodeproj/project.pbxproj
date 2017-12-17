@@ -26,6 +26,13 @@
 		EBB1824F1FE4DB4C00366C0F /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1824E1FE4DB4C00366C0F /* FeedController.swift */; };
 		EBB182511FE4DB5C00366C0F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182501FE4DB5C00366C0F /* ProfileController.swift */; };
 		EBB182531FE4DB6F00366C0F /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182521FE4DB6F00366C0F /* MenuController.swift */; };
+		EBB182551FE4DF2800366C0F /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182541FE4DF2800366C0F /* TableController.swift */; };
+		EBB182591FE4E6B900366C0F /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182581FE4E6B900366C0F /* MediaCell.swift */; };
+		EBB1825B1FE4E6C800366C0F /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1825A1FE4E6C800366C0F /* Media.swift */; };
+		EBB1825D1FE4E77900366C0F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1825C1FE4E77900366C0F /* Image.swift */; };
+		EBB1825F1FE4E78B00366C0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1825E1FE4E78B00366C0F /* User.swift */; };
+		EBB182611FE4E7AB00366C0F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182601FE4E7AB00366C0F /* Comment.swift */; };
+		EBB182631FE4E7BD00366C0F /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182621FE4E7BD00366C0F /* DataHolder.swift */; };
 		EBBC1A7C8745AC667CFC3453 /* Pods_CPhotoFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A70439B28DCC98C0203E05 /* Pods_CPhotoFeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +83,13 @@
 		EBB1824E1FE4DB4C00366C0F /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		EBB182501FE4DB5C00366C0F /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		EBB182521FE4DB6F00366C0F /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		EBB182541FE4DF2800366C0F /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		EBB182581FE4E6B900366C0F /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
+		EBB1825A1FE4E6C800366C0F /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		EBB1825C1FE4E77900366C0F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		EBB1825E1FE4E78B00366C0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EBB182601FE4E7AB00366C0F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		EBB182621FE4E7BD00366C0F /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		EEFCDF2F3D322296901351E8 /* Pods-CPhotoFeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPhotoFeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CPhotoFeedTests/Pods-CPhotoFeedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F31375677ED1F1AAEA04C998 /* Pods-CPhotoFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPhotoFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-CPhotoFeed/Pods-CPhotoFeed.release.xcconfig"; sourceTree = "<group>"; };
 		FC58D4C46EB22ECED3EDC3FB /* Pods_CPhotoFeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CPhotoFeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +173,8 @@
 		EBB1820B1FE3A72D00366C0F /* CPhotoFeed */ = {
 			isa = PBXGroup;
 			children = (
+				EBB182571FE4E68E00366C0F /* Models */,
+				EBB182561FE4E68500366C0F /* Views */,
 				EBB182451FE3B45300366C0F /* Secret */,
 				EBB182421FE3B27100366C0F /* Library */,
 				EBB1823A1FE3A83400366C0F /* Controllers */,
@@ -206,6 +222,7 @@
 			children = (
 				EBB182431FE3B28A00366C0F /* APIClient.swift */,
 				EBB1824A1FE3B51100366C0F /* Settings.swift */,
+				EBB182541FE4DF2800366C0F /* TableController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -217,6 +234,26 @@
 				EBB182481FE3B4B800366C0F /* settings.template.plist */,
 			);
 			path = Secret;
+			sourceTree = "<group>";
+		};
+		EBB182561FE4E68500366C0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBB182581FE4E6B900366C0F /* MediaCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBB182571FE4E68E00366C0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EBB1825A1FE4E6C800366C0F /* Media.swift */,
+				EBB1825C1FE4E77900366C0F /* Image.swift */,
+				EBB1825E1FE4E78B00366C0F /* User.swift */,
+				EBB182601FE4E7AB00366C0F /* Comment.swift */,
+				EBB182621FE4E7BD00366C0F /* DataHolder.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,9 +576,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB1825F1FE4E78B00366C0F /* User.swift in Sources */,
+				EBB182631FE4E7BD00366C0F /* DataHolder.swift in Sources */,
+				EBB1825B1FE4E6C800366C0F /* Media.swift in Sources */,
+				EBB1825D1FE4E77900366C0F /* Image.swift in Sources */,
+				EBB182611FE4E7AB00366C0F /* Comment.swift in Sources */,
 				EBB182531FE4DB6F00366C0F /* MenuController.swift in Sources */,
 				EBB182511FE4DB5C00366C0F /* ProfileController.swift in Sources */,
+				EBB182591FE4E6B900366C0F /* MediaCell.swift in Sources */,
 				EBB1823C1FE3A84500366C0F /* LoginController.swift in Sources */,
+				EBB182551FE4DF2800366C0F /* TableController.swift in Sources */,
 				EBB1824F1FE4DB4C00366C0F /* FeedController.swift in Sources */,
 				EBB1824B1FE3B51100366C0F /* Settings.swift in Sources */,
 				EBB1820D1FE3A72D00366C0F /* AppDelegate.swift in Sources */,

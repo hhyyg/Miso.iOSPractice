@@ -13,7 +13,15 @@ class MainController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setTitleLabel()
+    }
+
+    private func setTitleLabel() {
+        let label = UILabel()
+        label.text = "Photo Feed"
+        label.textColor  = .black
+        label.font = UIFont(name: "Noteworthy-Bold", size: 25)
+        navigationItem.titleView = label
     }
 
 }
