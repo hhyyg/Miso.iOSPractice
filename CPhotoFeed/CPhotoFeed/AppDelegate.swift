@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Compass
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     private var loginController: LoginController?
     private var mainController: MainController?
+    private var postLoginRouter = Router()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -21,9 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.tintColor = .black
 
         try! loadSettings()
-        showLogin()
+
+        if APIClient.shared.accessToken == nil {
+            showLogin()
+        } else {
+            showMain()
+        }
 
         window?.makeKeyAndVisible()
+        setupRouting()
 
         return true
     }
@@ -41,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError()
         }
         loginController.delegate = self
+        mainController = nil
         window?.rootViewController = loginController
     }
 
@@ -48,10 +57,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainController") as? MainController else {
             fatalError()
         }
-
         window?.rootViewController = mainController
+        self.mainController = mainController
         loginController = nil
+    }
+}
 
+extension AppDelegate {
+    func setupRouting() {
+
+        Navigator.scheme = "photofeed"
+        postLoginRouter.routes = [
+            "likes:{mediaId}": LikesRoute()
+        ]
+
+        Navigator.routes = Array(postLoginRouter.routes.keys)
+
+        Navigator.handle = { [weak self] location in
+            guard let selectedController = self?.mainController?.selectedViewController else {
+                fatalError()
+            }
+
+            let currentController = (selectedController as? UINavigationController)?.topViewController ?? selectedController
+
+            self?.postLoginRouter.navigate(to: location, from: currentController)
+        }
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Compass
 
 class FeedController: TableController<Media, MediaCell> {
 
@@ -30,7 +31,7 @@ class FeedController: TableController<Media, MediaCell> {
 
 extension FeedController: MediaCellDelegate {
     func mediaCell(_ cell: MediaCell, didViewLikes mediaId: String) {
-
+        try? Navigator.navigate(urn: "likes:\(mediaId)")
     }
 
     func mediaCell(_ cell: MediaCell, didViewComments mediaId: String) {

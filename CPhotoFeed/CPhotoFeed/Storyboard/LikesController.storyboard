@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13771"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Likes-->
+        <scene sceneID="xpr-Ba-idT">
+            <objects>
+                <tableViewController storyboardIdentifier="LikesController" id="O0H-f0-m2c" customClass="LikesController" customModule="CPhotoFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="elT-YH-HgD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="64" id="6UP-q5-9gl" customClass="UserCell" customModule="CPhotoFeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6UP-q5-9gl" id="D2s-Wg-4d9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nFQ-9G-CBR">
+                                            <rect key="frame" x="16" y="11" width="42" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="F2p-68-yL6"/>
+                                                <constraint firstAttribute="height" constant="42" id="eCx-at-emd"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ku0-Jt-G5E">
+                                            <rect key="frame" x="66" y="11" width="293" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="vdh-5Y-Wb7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="usernameButtonTouched:" destination="6UP-q5-9gl" eventType="touchUpInside" id="UJk-aa-Tjn"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBp-b7-rj9">
+                                            <rect key="frame" x="66" y="32" width="293" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="kGs-yt-u8N"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="iBp-b7-rj9" secondAttribute="trailing" id="AOa-NW-WJO"/>
+                                        <constraint firstItem="Ku0-Jt-G5E" firstAttribute="leading" secondItem="nFQ-9G-CBR" secondAttribute="trailing" constant="8" id="BaS-2b-jni"/>
+                                        <constraint firstItem="Ku0-Jt-G5E" firstAttribute="top" secondItem="D2s-Wg-4d9" secondAttribute="topMargin" id="J3f-1L-ZTy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ku0-Jt-G5E" secondAttribute="trailing" id="V8r-ip-uPm"/>
+                                        <constraint firstItem="iBp-b7-rj9" firstAttribute="leading" secondItem="nFQ-9G-CBR" secondAttribute="trailing" constant="8" id="gh5-BU-6ru"/>
+                                        <constraint firstItem="iBp-b7-rj9" firstAttribute="top" secondItem="Ku0-Jt-G5E" secondAttribute="bottom" constant="3" id="h5F-Jj-fMh"/>
+                                        <constraint firstItem="nFQ-9G-CBR" firstAttribute="leading" secondItem="D2s-Wg-4d9" secondAttribute="leadingMargin" id="p0g-vz-DNW"/>
+                                        <constraint firstItem="nFQ-9G-CBR" firstAttribute="top" secondItem="D2s-Wg-4d9" secondAttribute="topMargin" id="zfD-bM-bDU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="nFQ-9G-CBR" id="IDa-Co-0rX"/>
+                                    <outlet property="nameLabel" destination="iBp-b7-rj9" id="wzK-oZ-9CY"/>
+                                    <outlet property="usernameButton" destination="Ku0-Jt-G5E" id="iMV-cx-fc3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="O0H-f0-m2c" id="V13-oq-q73"/>
+                            <outlet property="delegate" destination="O0H-f0-m2c" id="xFb-QS-oap"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Likes" id="RYZ-Ds-dIy"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbw-16-vbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474.39999999999998" y="424.13793103448279"/>
+        </scene>
+    </scenes>
+</document>

@@ -48,6 +48,12 @@ class MediaCell: UITableViewCell {
     }
 
     @IBAction func viewLikeButtonTouched(_ sender: UIButton) {
+
+        guard let id = media?.id else {
+            return
+        }
+
+        delegate?.mediaCell(self, didViewLikes: id)
     }
 
     @IBAction func viewCommentButtonTouched(_ sender: UIButton) {

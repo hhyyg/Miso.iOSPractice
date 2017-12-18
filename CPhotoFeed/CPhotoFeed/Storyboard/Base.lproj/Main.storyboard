@@ -225,6 +225,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <state key="normal" title="Users who like button"/>
+                                            <connections>
+                                                <action selector="viewLikeButtonTouched:" destination="D10-eM-NDh" eventType="touchUpInside" id="qMg-hJ-zQi"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZU-xl-hT0">
                                             <rect key="frame" x="335" y="17.5" width="32" height="32"/>
@@ -249,9 +252,6 @@
                                                 <constraint firstAttribute="height" constant="32" id="uCW-H8-y5s"/>
                                             </constraints>
                                             <state key="normal" image="favorite"/>
-                                            <connections>
-                                                <action selector="viewLikeButtonTouched:" destination="D10-eM-NDh" eventType="touchUpInside" id="s3b-dY-LFp"/>
-                                            </connections>
                                         </button>
                                         <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnt-HU-rYP">
                                             <rect key="frame" x="48" y="411" width="32" height="32"/>
