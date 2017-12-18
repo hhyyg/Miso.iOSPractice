@@ -16,6 +16,17 @@ protocol MediaCellDelegate: class {
 
 class MediaCell: UITableViewCell {
 
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
+    @IBOutlet weak var userButton: UIButton!
+    @IBOutlet weak var locationLabel: UILabel!
+    
+    
+    
+    
+    
+    
     private var media: Media?
     weak var delegate: MediaCellDelegate?
 
