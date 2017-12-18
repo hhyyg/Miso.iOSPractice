@@ -15,6 +15,16 @@ class TableController<Model: Codable, Cell: UITableViewCell>: UITableViewControl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        loadData()
+
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+    }
+
+    @objc private func handleRefresh() {
+        loadData()
+        refreshControl!.endRefreshing()
     }
 
     func loadData() {
