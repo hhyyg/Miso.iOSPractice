@@ -18,6 +18,9 @@
 		EBB182981FE8F02A00366C0F /* DeepLinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182971FE8F02A00366C0F /* DeepLinkType.swift */; };
 		EBB1829A1FE8F07500366C0F /* DeepLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182991FE8F07500366C0F /* DeepLinkManager.swift */; };
 		EBB1829C1FE8F1DF00366C0F /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1829B1FE8F1DF00366C0F /* MainNavigationController.swift */; };
+		EBB1829E1FE8FADE00366C0F /* ShortcutParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1829D1FE8FADE00366C0F /* ShortcutParser.swift */; };
+		EBB182A01FE8FB1A00366C0F /* ShortcutKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1829F1FE8FB1A00366C0F /* ShortcutKey.swift */; };
+		EBB182A21FE8FDEF00366C0F /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB182A11FE8FDEF00366C0F /* ActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		EBB182971FE8F02A00366C0F /* DeepLinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkType.swift; sourceTree = "<group>"; };
 		EBB182991FE8F07500366C0F /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
 		EBB1829B1FE8F1DF00366C0F /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		EBB1829D1FE8FADE00366C0F /* ShortcutParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutParser.swift; sourceTree = "<group>"; };
+		EBB1829F1FE8FB1A00366C0F /* ShortcutKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutKey.swift; sourceTree = "<group>"; };
+		EBB182A11FE8FDEF00366C0F /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 				EBB182921FE8E30700366C0F /* LoginViewController.swift */,
 				EBB182941FE8E38700366C0F /* MainViewController.swift */,
 				EBB1829B1FE8F1DF00366C0F /* MainNavigationController.swift */,
+				EBB182A11FE8FDEF00366C0F /* ActivityViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -94,6 +101,8 @@
 			children = (
 				EBB182971FE8F02A00366C0F /* DeepLinkType.swift */,
 				EBB182991FE8F07500366C0F /* DeepLinkManager.swift */,
+				EBB1829D1FE8FADE00366C0F /* ShortcutParser.swift */,
+				EBB1829F1FE8FB1A00366C0F /* ShortcutKey.swift */,
 			);
 			path = DeepLink;
 			sourceTree = "<group>";
@@ -171,6 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB182931FE8E30700366C0F /* LoginViewController.swift in Sources */,
+				EBB182A01FE8FB1A00366C0F /* ShortcutKey.swift in Sources */,
+				EBB1829E1FE8FADE00366C0F /* ShortcutParser.swift in Sources */,
 				EBB182981FE8F02A00366C0F /* DeepLinkType.swift in Sources */,
 				EBB1829C1FE8F1DF00366C0F /* MainNavigationController.swift in Sources */,
 				EBB1827B1FE8E05700366C0F /* AppDelegate.swift in Sources */,
@@ -178,6 +189,7 @@
 				EBB1829A1FE8F07500366C0F /* DeepLinkManager.swift in Sources */,
 				EBB182901FE8E19500366C0F /* SplashViewController.swift in Sources */,
 				EBB182951FE8E38700366C0F /* MainViewController.swift in Sources */,
+				EBB182A21FE8FDEF00366C0F /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

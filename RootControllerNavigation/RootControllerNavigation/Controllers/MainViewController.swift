@@ -17,6 +17,9 @@ class MainViewController: UIViewController {
         title = "Main Screen"
         let logoutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logout))
         navigationItem.setLeftBarButton(logoutButton, animated: true)
+        
+        let activityButton = UIBarButtonItem(title: "Activity", style: .plain, target: self , action: #selector(showActivityScreen(animated:)))
+        navigationItem.setRightBarButton(activityButton, animated: true)
     }
     
     @objc
@@ -24,6 +27,11 @@ class MainViewController: UIViewController {
         UserDefaults.standard.set(false, forKey: "LOGGED_IN")
         
         AppDelegate.shared.rootViewController.switchToLogout()
-        
+    }
+    
+    @objc
+    func showActivityScreen(animated: Bool = true) {
+        let activityViewControler = ActivityViewController()
+        navigationController?.pushViewController(activityViewControler, animated: animated)
     }
 }

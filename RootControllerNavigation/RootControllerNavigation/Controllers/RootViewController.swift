@@ -30,6 +30,16 @@ class RootViewController: UIViewController {
         if let mainNavigationController = current as? MainNavigationController,
             let deeplink = deepLink {
             
+            switch deeplink {
+            case .activity:
+                
+                (mainNavigationController.topViewController as? MainViewController)?.showActivityScreen(animated: true)
+                
+            default:
+                break
+                
+            }
+            
             self.deepLink = nil
         }
     }
@@ -51,8 +61,10 @@ class RootViewController: UIViewController {
     
     func switchToMainScreen() {
         let mainViewController = MainViewController()
-        let new = UINavigationController(rootViewController: mainViewController)
-        animateFadeTransition(to: new)
+        let new = MainNavigationController(rootViewController: mainViewController)
+        animateFadeTransition(to: new) { [weak self] in
+            self?.handleDeepLink()
+        }
     }
     
     private func animateFadeTransition(to new: UIViewController,

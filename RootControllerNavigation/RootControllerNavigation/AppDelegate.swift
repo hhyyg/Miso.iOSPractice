@@ -20,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         return true
     }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        DeepLinkManager.shared.checkDeepLink()
+    }    
+    
+    //MARK: Shortcuts
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        completionHandler(DeepLinkManager.shared.handleShortcut(item: shortcutItem))
+        
+    }
 
 }
 
