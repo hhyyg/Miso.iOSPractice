@@ -10,6 +10,11 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    var deepLink: DeepLinkType? {
+        didSet {
+            handleDeepLink()
+        }
+    }
     private var current: UIViewController = SplashViewController()
     
     override func viewDidLoad() {
@@ -21,6 +26,14 @@ class RootViewController: UIViewController {
         current.didMove(toParentViewController: self)
     }
 
+    private func handleDeepLink() {
+        if let mainNavigationController = current as? MainNavigationController,
+            let deeplink = deepLink {
+            
+            self.deepLink = nil
+        }
+    }
+    
     func showLoginScreen() {
         let new = UINavigationController(rootViewController: LoginViewController())
         
