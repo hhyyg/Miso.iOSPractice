@@ -12,6 +12,12 @@
 		EB532E4B1FEC9C03008D431F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB532E491FEC9C03008D431F /* Main.storyboard */; };
 		EB532E4D1FEC9C03008D431F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB532E4C1FEC9C03008D431F /* Assets.xcassets */; };
 		EB532E501FEC9C03008D431F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB532E4E1FEC9C03008D431F /* LaunchScreen.storyboard */; };
+		EB532E591FECA060008D431F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB532E581FECA060008D431F /* RxSwift.framework */; };
+		EB532E5B1FECA070008D431F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB532E5A1FECA070008D431F /* RxCocoa.framework */; };
+		EB532E5F1FECA6B6008D431F /* Numbers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB532E5E1FECA6B6008D431F /* Numbers.storyboard */; };
+		EB532E611FECA6FC008D431F /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB532E601FECA6FC008D431F /* NumbersViewController.swift */; };
+		EB55D2461FECC530009D31C6 /* SimpleValidation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB55D2451FECC530009D31C6 /* SimpleValidation.storyboard */; };
+		EB55D2481FECC554009D31C6 /* SimpleValidationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55D2471FECC554009D31C6 /* SimpleValidationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		EB532E4C1FEC9C03008D431F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB532E4F1FEC9C03008D431F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB532E511FEC9C03008D431F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB532E581FECA060008D431F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		EB532E5A1FECA070008D431F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		EB532E5E1FECA6B6008D431F /* Numbers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Numbers.storyboard; sourceTree = "<group>"; };
+		EB532E601FECA6FC008D431F /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
+		EB55D2451FECC530009D31C6 /* SimpleValidation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleValidation.storyboard; sourceTree = "<group>"; };
+		EB55D2471FECC554009D31C6 /* SimpleValidationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB532E5B1FECA070008D431F /* RxCocoa.framework in Frameworks */,
+				EB532E591FECA060008D431F /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,7 @@
 			children = (
 				EB532E441FEC9C03008D431F /* RxPractice */,
 				EB532E431FEC9C03008D431F /* Products */,
+				EB532E571FECA060008D431F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +69,8 @@
 		EB532E441FEC9C03008D431F /* RxPractice */ = {
 			isa = PBXGroup;
 			children = (
+				EB55D2441FECC51B009D31C6 /* SimpleValidation */,
+				EB532E5D1FECA6A6008D431F /* Numbers */,
 				EB532E451FEC9C03008D431F /* AppDelegate.swift */,
 				EB532E471FEC9C03008D431F /* ViewController.swift */,
 				EB532E491FEC9C03008D431F /* Main.storyboard */,
@@ -62,6 +79,33 @@
 				EB532E511FEC9C03008D431F /* Info.plist */,
 			);
 			path = RxPractice;
+			sourceTree = "<group>";
+		};
+		EB532E571FECA060008D431F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB532E5A1FECA070008D431F /* RxCocoa.framework */,
+				EB532E581FECA060008D431F /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB532E5D1FECA6A6008D431F /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				EB532E5E1FECA6B6008D431F /* Numbers.storyboard */,
+				EB532E601FECA6FC008D431F /* NumbersViewController.swift */,
+			);
+			path = Numbers;
+			sourceTree = "<group>";
+		};
+		EB55D2441FECC51B009D31C6 /* SimpleValidation */ = {
+			isa = PBXGroup;
+			children = (
+				EB55D2451FECC530009D31C6 /* SimpleValidation.storyboard */,
+				EB55D2471FECC554009D31C6 /* SimpleValidationController.swift */,
+			);
+			path = SimpleValidation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +118,7 @@
 				EB532E3E1FEC9C03008D431F /* Sources */,
 				EB532E3F1FEC9C03008D431F /* Frameworks */,
 				EB532E401FEC9C03008D431F /* Resources */,
+				EB532E5C1FECA08E008D431F /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -124,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB532E501FEC9C03008D431F /* LaunchScreen.storyboard in Resources */,
+				EB55D2461FECC530009D31C6 /* SimpleValidation.storyboard in Resources */,
+				EB532E5F1FECA6B6008D431F /* Numbers.storyboard in Resources */,
 				EB532E4D1FEC9C03008D431F /* Assets.xcassets in Resources */,
 				EB532E4B1FEC9C03008D431F /* Main.storyboard in Resources */,
 			);
@@ -131,11 +178,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EB532E5C1FECA08E008D431F /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EB532E3E1FEC9C03008D431F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB55D2481FECC554009D31C6 /* SimpleValidationController.swift in Sources */,
+				EB532E611FECA6FC008D431F /* NumbersViewController.swift in Sources */,
 				EB532E481FEC9C03008D431F /* ViewController.swift in Sources */,
 				EB532E461FEC9C03008D431F /* AppDelegate.swift in Sources */,
 			);
@@ -276,6 +344,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.RxPractice;
@@ -291,6 +363,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.RxPractice;
